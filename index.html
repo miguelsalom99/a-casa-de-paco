@@ -9,7 +9,7 @@
 <meta property="og:description" content="Alojamiento de 4 dormitorios a un paseo de la playa de Arealonga, en O Barqueiro. Reserva directa por WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231c4b5e' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><rect width='24' height='24' rx='5' fill='%23e4f0f0' stroke='none'/><circle cx='12' cy='6' r='2.4'/><path d='M12 21V9'/><path d='M6.5 13H4.5a7.5 7.5 0 0 0 15 0h-2'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -134,7 +134,7 @@
   .band .kicker{color:#ffb08a;}
   .amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
   .amen-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-lg);padding:20px 16px;text-align:center;}
-  .amen-card .ic{font-size:24px;margin-bottom:8px;}
+  .amen-card .ic{margin-bottom:8px;color:#ffb08a;line-height:0;}
   .amen-card h4{margin:0 0 3px;font-size:14.5px;}
   .amen-card p{margin:0;font-size:12px;color:#cfe3e3;}
   @media (max-width:860px){.amen-grid{grid-template-columns:repeat(2,1fr);}}
@@ -144,7 +144,7 @@
   .room-card{background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);}
   .room-card img{height:150px;width:100%;object-fit:cover;}
   .room-card .body{padding:24px 20px;}
-  .room-card .rc-ic{font-size:28px;margin-bottom:10px;line-height:1;}
+  .room-card .rc-ic{margin-bottom:10px;line-height:0;color:var(--sea);}
   .room-card h4{margin:0 0 6px;color:var(--sea-deep);font-size:16px;}
   .room-card p{margin:0;font-size:13px;color:var(--stone);}
   @media (max-width:860px){.rooms-grid{grid-template-columns:repeat(2,1fr);}}
@@ -198,8 +198,10 @@
   .plan-tabs button{border:1.5px solid var(--sea);background:transparent;color:var(--sea-deep);padding:9px 16px;border-radius:var(--r-sm);font-weight:600;font-size:13.5px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .15s ease;}
   .plan-tabs button.active{background:var(--sea-deep);color:#fff;border-color:var(--sea-deep);}
   .plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .plan-card{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;}
-  .plan-card .tag{align-self:flex-start;background:var(--sand);color:var(--sea-deep);font-size:11px;font-weight:600;padding:4px 10px;border-radius:var(--r-pill);margin-bottom:10px;}
+  .plan-card{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;}
+  .plan-card .pc-img{width:100%;height:158px;object-fit:cover;background:var(--sea-light);}
+  .plan-card .pc-body{padding:20px 22px;display:flex;flex-direction:column;flex:1;}
+  .plan-card .tag{align-self:flex-start;display:inline-flex;align-items:center;gap:5px;background:var(--sand);color:var(--sea-deep);font-size:11px;font-weight:600;padding:4px 10px;border-radius:var(--r-pill);margin-bottom:10px;}
   .plan-card h4{margin:0 0 6px;color:var(--sea-deep);font-size:17px;}
   .plan-card p{margin:0 0 14px;font-size:13px;color:var(--stone);flex:1;}
   .plan-links{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;font-weight:600;}
@@ -226,7 +228,7 @@
   .location-grid iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:var(--r-lg);box-shadow:var(--shadow);}
   .loc-list{list-style:none;margin:0;padding:0;}
   .loc-list li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--sand-dark);}
-  .loc-list li .ic{font-size:20px;}
+  .loc-list li .ic{line-height:0;color:var(--sea);}
   .loc-list li b{display:block;color:var(--sea-deep);}
   .loc-list li span{font-size:13px;color:var(--stone);}
   @media (max-width:860px){.location-grid{grid-template-columns:1fr;}}
@@ -251,7 +253,8 @@
   .host h3{margin:0 0 6px;color:var(--sea-deep);}
   .host p{margin:0;color:var(--stone);font-size:14px;}
   .badge-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;}
-  .badge{background:var(--white);border-radius:var(--r-pill);padding:6px 12px;font-size:12px;font-weight:600;color:var(--sea-deep);}
+  .badge{background:var(--white);border-radius:var(--r-pill);padding:6px 12px;font-size:12px;font-weight:600;color:var(--sea-deep);display:inline-flex;align-items:center;gap:5px;}
+  .badge .ico{color:var(--terracotta);}
   @media (max-width:640px){.host{flex-direction:column;text-align:center;}}
 
   /* FOOTER */
@@ -266,8 +269,16 @@
   @media (max-width:760px){.footer-grid{grid-template-columns:1fr;}}
 
   /* FLOATING WHATSAPP */
-  .wa-float{position:fixed;right:18px;bottom:18px;z-index:70;background:var(--wa);color:#fff;width:56px;height:56px;border-radius:var(--r-pill);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.28);text-decoration:none;font-size:26px;transition:transform .15s ease;}
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:70;background:var(--wa);color:#fff;width:56px;height:56px;border-radius:var(--r-pill);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.28);text-decoration:none;transition:transform .15s ease;}
   .wa-float:hover{transform:scale(1.08);}
+
+  /* ICONS */
+  .ico{width:1.1em;height:1.1em;display:inline-block;vertical-align:-0.16em;flex:none;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+  .ico-md{width:20px;height:20px;}
+  .ico-lg{width:26px;height:26px;}
+  .ico-sm{width:12px;height:12px;stroke-width:2;}
+  .wa-float .ico{width:26px;height:26px;}
+  .brand .mark .ico{width:22px;height:22px;}
 
   html[lang="es"] [data-lang="en"]{display:none !important;}
   html[lang="en"] [data-lang="es"]{display:none !important;}
@@ -275,12 +286,39 @@
 </head>
 <body>
 
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-anchor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M12 22V8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.6 8.6 0 0 1-3.9-.9L3 21l1.4-4.5A8.4 8.4 0 0 1 3.5 11 8.4 8.4 0 0 1 12 2.5a8.4 8.4 0 0 1 9 9Z"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 9h18a2 2 0 0 1 2 2v9"/><path d="M2 17h20"/><path d="M6 9v8"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 8c.7.6 1.4 1 2.7 1 2.6 0 2.6-2 5.3-2s2.7 2 5.3 2c1.3 0 2-.4 2.7-1"/><path d="M2 14c.7.6 1.4 1 2.7 1 2.6 0 2.6-2 5.3-2s2.7 2 5.3 2c1.3 0 2-.4 2.7-1"/><path d="M2 20c.7.6 1.4 1 2.7 1 2.6 0 2.6-2 5.3-2s2.7 2 5.3 2c1.3 0 2-.4 2.7-1"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 17H3v-4l2-5c.3-.6.9-1 1.5-1h11c.6 0 1.2.4 1.5 1l2 5v4h-2"/><path d="M7 17h10"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6 .9-4.3 4.2 1 6L12 16.8 6.6 19.6l1-6L3.3 9.4l6-.9Z"/></symbol>
+    <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 22v-6"/><path d="m12 16-3.5-3.5"/><path d="m12 13 3-3"/><path d="M12 2 6 11h3l-3 4h12l-3-4h3Z"/></symbol>
+    <symbol id="i-kitchen" viewBox="0 0 24 24"><path d="M4 3v6a3 3 0 0 0 3 3v9"/><path d="M7 3v6"/><path d="M10 3v6"/><path d="M18 3c-1.7 0-3 2.5-3 6v5h3"/><path d="M18 14v7"/></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="m8 3 4 3 4-3"/></symbol>
+    <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 3-3 6 13H3Z"/></symbol>
+    <symbol id="i-door" viewBox="0 0 24 24"><path d="M13 4h3a1 1 0 0 1 1 1v15"/><path d="M3 20h18"/><path d="M7 20V5a1 1 0 0 1 1-1h4v16"/><path d="M10 12h.01"/></symbol>
+    <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M4 12V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 15a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3H2Z"/><path d="M5 18v2"/><path d="M19 18v2"/></symbol>
+    <symbol id="i-shower" viewBox="0 0 24 24"><path d="M4 4a2 2 0 0 0-2 2v12"/><path d="M2 7h9a4 4 0 0 1 4 4"/><path d="M15 7h.01"/><path d="M8 17v.01M12 17v.01M16 17v.01M10 20v.01M14 20v.01"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="M8 2v4"/><path d="M16 2v4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="2"/><path d="M5 10h14"/><path d="M9 7h6"/><path d="m8 17-2 4"/><path d="m16 17 2 4"/><path d="M8.5 14h.01M15.5 14h.01"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M4 13 2 8l2-1 4 3 6-6c1-1 2.5-1.5 3.2-.8s.2 2.2-.8 3.2l-6 6 3 4-1 2-5-6-3 3H4l1-3Z"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19h4a4 4 0 0 0 0-8H8a4 4 0 0 1 0-8h3"/></symbol>
+  </defs>
+</svg>
+
 <!-- UTILITY BAR -->
 <div class="utilbar">
   <div class="wrap">
     <span class="u-tide">O Barqueiro · Rías Altas · Galicia — <span data-lang="es">Marea &amp; costa atlántica</span><span data-lang="en">Atlantic coast &amp; tides</span></span>
     <div style="display:flex;align-items:center;gap:16px">
-      <a id="utilWa" href="#" target="_blank" rel="noopener">💬 +34 691 999 415</a>
+      <a id="utilWa" href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg> +34 691 999 415</a>
       <div class="lang">
         <button id="btnEs" onclick="setLang('es')">ES</button>
         <button id="btnEn" onclick="setLang('en')">EN</button>
@@ -293,7 +331,7 @@
 <header class="site">
   <nav class="wrap">
     <a href="#top" class="brand">
-      <span class="mark">⚓</span>
+      <span class="mark"><svg class="ico"><use href="#i-anchor"/></svg></span>
       <span>
         <span class="name">A Casa de Paco</span>
         <span class="sub">O Barqueiro · Galicia</span>
@@ -309,7 +347,7 @@
       <li><a href="#location" data-lang="es">Ubicación</a><a href="#location" data-lang="en">Location</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="btn btn-primary" href="#book"><span>🗓️</span><span class="lbl" data-lang="es">Reservar</span><span class="lbl" data-lang="en">Book</span></a>
+      <a class="btn btn-primary" href="#book"><svg class="ico"><use href="#i-calendar"/></svg><span class="lbl" data-lang="es">Reservar</span><span class="lbl" data-lang="en">Book</span></a>
       <button class="burger" id="burgerBtn" aria-label="Menú">☰</button>
     </div>
   </nav>
@@ -318,7 +356,7 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="wrap">
-    <span class="eyebrow">⚓ <span data-lang="es">O Barqueiro · a un paseo de la playa</span><span data-lang="en">O Barqueiro · a short walk from the beach</span></span>
+    <span class="eyebrow"><svg class="ico"><use href="#i-anchor"/></svg> <span data-lang="es">O Barqueiro · a un paseo de la playa</span><span data-lang="en">O Barqueiro · a short walk from the beach</span></span>
     <h1 data-lang="es">Donde la ría gallega se encuentra con la calma</h1>
     <h1 data-lang="en">Where the Galician estuary meets calm</h1>
     <p class="lead" data-lang="es">Un alojamiento amplio y luminoso de 113 m² a un paseo de la playa de Arealonga, en uno de los rincones más auténticos de la costa gallega. Cuatro dormitorios, jardín y patio exterior. Ideal para familias y grupos de hasta 7 personas.</p>
@@ -346,11 +384,11 @@
     </div>
 
     <div class="hero-badges">
-      <span>🛏️ <span data-lang="es">4 dormitorios · 4 camas</span><span data-lang="en">4 bedrooms · 4 beds</span></span>
-      <span>👥 <span data-lang="es">Hasta 7 huéspedes</span><span data-lang="en">Up to 7 guests</span></span>
-      <span>🏖️ <span data-lang="es">1,4 km a la playa</span><span data-lang="en">1.4 km to the beach</span></span>
-      <span>🚗 <span data-lang="es">Parking privado gratis</span><span data-lang="en">Free private parking</span></span>
-      <span>⭐ <span data-lang="es">9,5 Booking · 5,0 Airbnb</span><span data-lang="en">9.5 Booking · 5.0 Airbnb</span></span>
+      <span><svg class="ico"><use href="#i-bed"/></svg> <span data-lang="es">4 dormitorios · 4 camas</span><span data-lang="en">4 bedrooms · 4 beds</span></span>
+      <span><svg class="ico"><use href="#i-users"/></svg> <span data-lang="es">Hasta 7 huéspedes</span><span data-lang="en">Up to 7 guests</span></span>
+      <span><svg class="ico"><use href="#i-waves"/></svg> <span data-lang="es">1,4 km a la playa</span><span data-lang="en">1.4 km to the beach</span></span>
+      <span><svg class="ico"><use href="#i-car"/></svg> <span data-lang="es">Parking privado gratis</span><span data-lang="en">Free private parking</span></span>
+      <span><svg class="ico"><use href="#i-star"/></svg> <span data-lang="es">9,5 Booking · 5,0 Airbnb</span><span data-lang="en">9.5 Booking · 5.0 Airbnb</span></span>
     </div>
 
     <div class="strip">
@@ -396,14 +434,14 @@
       <p data-lang="en">37 amenities listed on Airbnb and Booking. These are the highlights.</p>
     </div>
     <div class="amen-grid">
-      <div class="amen-card"><div class="ic">🚗</div><h4 data-lang="es">Parking gratis in situ</h4><h4 data-lang="en">Free parking on site</h4><p data-lang="es">En la propiedad</p><p data-lang="en">On the property</p></div>
-      <div class="amen-card"><div class="ic">🌳</div><h4 data-lang="es">Jardín y patio exterior</h4><h4 data-lang="en">Garden &amp; outdoor patio</h4><p data-lang="es">Espacio exterior privado</p><p data-lang="en">Private outdoor space</p></div>
-      <div class="amen-card"><div class="ic">🍳</div><h4 data-lang="es">Cocina completa</h4><h4 data-lang="en">Full kitchen</h4><p data-lang="es">Nevera, cafetera, lavadora</p><p data-lang="en">Fridge, coffee maker, washer</p></div>
-      <div class="amen-card"><div class="ic">📺</div><h4 data-lang="es">TV de pantalla plana</h4><h4 data-lang="en">Flat-screen TV</h4><p data-lang="es">En el salón</p><p data-lang="en">In the living room</p></div>
-      <div class="amen-card"><div class="ic">🏔️</div><h4 data-lang="es">Vistas montaña, jardín y pueblo</h4><h4 data-lang="en">Mountain, garden &amp; village views</h4><p data-lang="es">Luz natural todo el día</p><p data-lang="en">Natural light all day</p></div>
-      <div class="amen-card"><div class="ic">🚪</div><h4 data-lang="es">Entrada independiente</h4><h4 data-lang="en">Private entrance</h4><p data-lang="es">Primera planta de casa</p><p data-lang="en">First floor of a house</p></div>
-      <div class="amen-card"><div class="ic">🛌</div><h4 data-lang="es">Ropa de cama incluida</h4><h4 data-lang="en">Linens included</h4><p data-lang="es">Secador y amenities</p><p data-lang="en">Hair dryer &amp; toiletries</p></div>
-      <div class="amen-card"><div class="ic">🏖️</div><h4 data-lang="es">Playa cerca</h4><h4 data-lang="en">Beach nearby</h4><p data-lang="es">Arealonga a 1,4 km</p><p data-lang="en">Arealonga 1.4 km away</p></div>
+      <div class="amen-card"><div class="ic"><svg class="ico ico-lg"><use href="#i-car"/></svg></div><h4 data-lang="es">Parking gratis in situ</h4><h4 data-lang="en">Free parking on site</h4><p data-lang="es">En la propiedad</p><p data-lang="en">On the property</p></div>
+      <div class="amen-card"><div class="ic"><svg class="ico ico-lg"><use href="#i-tree"/></svg></div><h4 data-lang="es">Jardín y patio exterior</h4><h4 data-lang="en">Garden &amp; outdoor patio</h4><p data-lang="es">Espacio exterior privado</p><p data-lang="en">Private outdoor space</p></div>
+      <div class="amen-card"><div class="ic"><svg class="ico ico-lg"><use href="#i-kitchen"/></svg></div><h4 data-lang="es">Cocina completa</h4><h4 data-lang="en">Full kitchen</h4><p data-lang="es">Nevera, cafetera, lavadora</p><p data-lang="en">Fridge, coffee maker, washer</p></div>
+      <div class="amen-card"><div class="ic"><svg class="ico ico-lg"><use href="#i-tv"/></svg></div><h4 data-lang="es">TV de pantalla plana</h4><h4 data-lang="en">Flat-screen TV</h4><p data-lang="es">En el salón</p><p data-lang="en">In the living room</p></div>
+      <div class="amen-card"><div class="ic"><svg class="ico ico-lg"><use href="#i-mountain"/></svg></div><h4 data-lang="es">Vistas montaña, jardín y pueblo</h4><h4 data-lang="en">Mountain, garden &amp; village views</h4><p data-lang="es">Luz natural todo el día</p><p data-lang="en">Natural light all day</p></div>
+      <div class="amen-card"><div class="ic"><svg class="ico ico-lg"><use href="#i-door"/></svg></div><h4 data-lang="es">Entrada independiente</h4><h4 data-lang="en">Private entrance</h4><p data-lang="es">Primera planta de casa</p><p data-lang="en">First floor of a house</p></div>
+      <div class="amen-card"><div class="ic"><svg class="ico ico-lg"><use href="#i-bed"/></svg></div><h4 data-lang="es">Ropa de cama incluida</h4><h4 data-lang="en">Linens included</h4><p data-lang="es">Secador y amenities</p><p data-lang="en">Hair dryer &amp; toiletries</p></div>
+      <div class="amen-card"><div class="ic"><svg class="ico ico-lg"><use href="#i-waves"/></svg></div><h4 data-lang="es">Playa cerca</h4><h4 data-lang="en">Beach nearby</h4><p data-lang="es">Arealonga a 1,4 km</p><p data-lang="en">Arealonga 1.4 km away</p></div>
     </div>
   </div>
 </section>
@@ -418,16 +456,16 @@
     </div>
     <div class="rooms-grid">
       <div class="room-card">
-        <div class="body"><div class="rc-ic">🛏️</div><h4 data-lang="es">3 dormitorios dobles</h4><h4 data-lang="en">3 double bedrooms</h4><p data-lang="es">Camas de matrimonio y armario</p><p data-lang="en">Double beds and wardrobe</p></div>
+        <div class="body"><div class="rc-ic"><svg class="ico ico-lg"><use href="#i-bed"/></svg></div><h4 data-lang="es">3 dormitorios dobles</h4><h4 data-lang="en">3 double bedrooms</h4><p data-lang="es">Camas de matrimonio y armario</p><p data-lang="en">Double beds and wardrobe</p></div>
       </div>
       <div class="room-card">
-        <div class="body"><div class="rc-ic">🛏️</div><h4 data-lang="es">1 dormitorio individual</h4><h4 data-lang="en">1 single bedroom</h4><p data-lang="es">Ideal para niños o para viajar solo/a</p><p data-lang="en">Great for kids or solo guests</p></div>
+        <div class="body"><div class="rc-ic"><svg class="ico ico-lg"><use href="#i-bed"/></svg></div><h4 data-lang="es">1 dormitorio individual</h4><h4 data-lang="en">1 single bedroom</h4><p data-lang="es">Ideal para niños o para viajar solo/a</p><p data-lang="en">Great for kids or solo guests</p></div>
       </div>
       <div class="room-card">
-        <div class="body"><div class="rc-ic">🛋️</div><h4 data-lang="es">Salón con 2 sofás</h4><h4 data-lang="en">Living room with 2 sofas</h4><p data-lang="es">Amplio y luminoso, con TV</p><p data-lang="en">Bright and spacious, with TV</p></div>
+        <div class="body"><div class="rc-ic"><svg class="ico ico-lg"><use href="#i-sofa"/></svg></div><h4 data-lang="es">Salón con 2 sofás</h4><h4 data-lang="en">Living room with 2 sofas</h4><p data-lang="es">Amplio y luminoso, con TV</p><p data-lang="en">Bright and spacious, with TV</p></div>
       </div>
       <div class="room-card">
-        <div class="body"><div class="rc-ic">🚿</div><h4 data-lang="es">2 baños con ducha</h4><h4 data-lang="en">2 bathrooms with shower</h4><p data-lang="es">Privados del alojamiento</p><p data-lang="en">Private to the accommodation</p></div>
+        <div class="body"><div class="rc-ic"><svg class="ico ico-lg"><use href="#i-shower"/></svg></div><h4 data-lang="es">2 baños con ducha</h4><h4 data-lang="en">2 bathrooms with shower</h4><p data-lang="es">Privados del alojamiento</p><p data-lang="en">Private to the accommodation</p></div>
       </div>
     </div>
   </div>
@@ -476,7 +514,7 @@
           <div class="cal-msg info" id="calMsg" data-lang="es">Selecciona tu fecha de entrada en el calendario.</div>
           <div class="cal-msg info" id="calMsgEn" data-lang="en">Select your check-in date on the calendar.</div>
           <a class="btn btn-wa" id="calWa" href="#" target="_blank" rel="noopener" aria-disabled="true">
-            <span data-lang="es">💬 Consultar por WhatsApp</span><span data-lang="en">💬 Ask on WhatsApp</span>
+            <svg class="ico"><use href="#i-chat"/></svg><span data-lang="es">Consultar por WhatsApp</span><span data-lang="en">Ask on WhatsApp</span>
           </a>
           <a class="btn btn-secondary" id="calAirbnb" href="https://www.airbnb.es/rooms/865260422376480197" target="_blank" rel="noopener">
             <span data-lang="es">Reservar en Airbnb ↗</span><span data-lang="en">Book on Airbnb ↗</span>
@@ -560,10 +598,10 @@
     <div class="location-grid">
       <iframe src="https://www.google.com/maps?q=Estrada+Viveiro+55,+15337+O+Barqueiro,+A+Coru%C3%B1a&hl=es&z=15&output=embed" loading="lazy" allowfullscreen title="Mapa de A Casa de Paco"></iframe>
       <ul class="loc-list">
-        <li><span class="ic">📍</span><div><b data-lang="es">Dirección</b><b data-lang="en">Address</b><span>Estrada Viveiro 55, 15337 O Barqueiro, A Coruña, Galicia · <a href="https://www.google.com/maps/dir/?api=1&destination=Estrada+Viveiro+55,+15337+O+Barqueiro,+A+Coru%C3%B1a" target="_blank" rel="noopener" style="color:var(--sea)">Cómo llegar ↗</a></span></div></li>
-        <li><span class="ic">🏖️</span><div><b data-lang="es">Playa de Arealonga</b><b data-lang="en">Arealonga beach</b><span data-lang="es">1,4 km · unos 19 min a pie</span><span data-lang="en">1.4 km · about a 19-minute walk</span></div></li>
-        <li><span class="ic">🚆</span><div><b data-lang="es">Estación de tren O Barqueiro (FEVE)</b><b data-lang="en">O Barqueiro train station (FEVE)</b><span data-lang="es">Línea Ferrol–Ribadeo–Oviedo, a 5 min</span><span data-lang="en">Ferrol–Ribadeo–Oviedo line, 5 min away</span></div></li>
-        <li><span class="ic">✈️</span><div><b data-lang="es">Aeropuertos</b><b data-lang="en">Airports</b><span data-lang="es">A Coruña 100 km · Asturias 135 km · Santiago 160 km</span><span data-lang="en">A Coruña 100 km · Asturias 135 km · Santiago 160 km</span></div></li>
+        <li><span class="ic"><svg class="ico ico-md"><use href="#i-pin"/></svg></span><div><b data-lang="es">Dirección</b><b data-lang="en">Address</b><span>Estrada Viveiro 55, 15337 O Barqueiro, A Coruña, Galicia · <a href="https://www.google.com/maps/dir/?api=1&destination=Estrada+Viveiro+55,+15337+O+Barqueiro,+A+Coru%C3%B1a" target="_blank" rel="noopener" style="color:var(--sea)">Cómo llegar ↗</a></span></div></li>
+        <li><span class="ic"><svg class="ico ico-md"><use href="#i-waves"/></svg></span><div><b data-lang="es">Playa de Arealonga</b><b data-lang="en">Arealonga beach</b><span data-lang="es">1,4 km · unos 19 min a pie</span><span data-lang="en">1.4 km · about a 19-minute walk</span></div></li>
+        <li><span class="ic"><svg class="ico ico-md"><use href="#i-train"/></svg></span><div><b data-lang="es">Estación de tren O Barqueiro (FEVE)</b><b data-lang="en">O Barqueiro train station (FEVE)</b><span data-lang="es">Línea Ferrol–Ribadeo–Oviedo, a 5 min</span><span data-lang="en">Ferrol–Ribadeo–Oviedo line, 5 min away</span></div></li>
+        <li><span class="ic"><svg class="ico ico-md"><use href="#i-plane"/></svg></span><div><b data-lang="es">Aeropuertos</b><b data-lang="en">Airports</b><span data-lang="es">A Coruña 100 km · Asturias 135 km · Santiago 160 km</span><span data-lang="en">A Coruña 100 km · Asturias 135 km · Santiago 160 km</span></div></li>
       </ul>
     </div>
   </div>
@@ -591,7 +629,7 @@
           <li data-lang="es">Consejos locales personalizados</li><li data-lang="en">Personalised local tips</li>
         </ul>
         <a class="btn btn-wa" id="bookWa" href="#" target="_blank" rel="noopener">
-          <span data-lang="es">💬 Escribir a Carmen</span><span data-lang="en">💬 Message Carmen</span>
+          <svg class="ico"><use href="#i-chat"/></svg><span data-lang="es">Escribir a Carmen</span><span data-lang="en">Message Carmen</span>
         </a>
       </div>
       <div class="book-card">
@@ -637,9 +675,9 @@
         <p data-lang="es">Carmen lleva 3 años recibiendo huéspedes en O Barqueiro, con una tasa de respuesta del 100 % y respuesta rápida. Siempre disponible para recomendarte los mejores rincones de la zona.</p>
         <p data-lang="en">Carmen has been welcoming guests in O Barqueiro for 3 years, with a 100% response rate and quick replies. Always happy to recommend the best spots in the area.</p>
         <div class="badge-row">
-          <span class="badge" data-lang="es">⭐ 100 % respuesta</span><span class="badge" data-lang="en">⭐ 100% response rate</span>
-          <span class="badge" data-lang="es">⏱️ Respuesta rápida</span><span class="badge" data-lang="en">⏱️ Quick to reply</span>
-          <span class="badge" data-lang="es">🏡 3 años como anfitriona</span><span class="badge" data-lang="en">🏡 3 years hosting</span>
+          <span class="badge" data-lang="es"><svg class="ico"><use href="#i-star"/></svg> 100 % respuesta</span><span class="badge" data-lang="en"><svg class="ico"><use href="#i-star"/></svg> 100% response rate</span>
+          <span class="badge" data-lang="es"><svg class="ico"><use href="#i-clock"/></svg> Respuesta rápida</span><span class="badge" data-lang="en"><svg class="ico"><use href="#i-clock"/></svg> Quick to reply</span>
+          <span class="badge" data-lang="es"><svg class="ico"><use href="#i-home"/></svg> 3 años como anfitriona</span><span class="badge" data-lang="en"><svg class="ico"><use href="#i-home"/></svg> 3 years hosting</span>
         </div>
       </div>
     </div>
@@ -653,7 +691,7 @@
         <h5>A Casa de Paco</h5>
         <p data-lang="es">Estrada Viveiro 55, 15337 O Barqueiro, A Coruña, Galicia, España.</p>
         <p data-lang="en">Estrada Viveiro 55, 15337 O Barqueiro, A Coruña, Galicia, Spain.</p>
-        <p><a id="footWa" href="#" target="_blank" rel="noopener" style="color:var(--wa);font-weight:600">💬 +34 691 999 415 (Carmen)</a></p>
+        <p><a id="footWa" href="#" target="_blank" rel="noopener" style="color:var(--wa);font-weight:600;display:inline-flex;align-items:center;gap:6px"><svg class="ico"><use href="#i-chat"/></svg> +34 691 999 415 (Carmen)</a></p>
       </div>
       <div>
         <h5 data-lang="es">Enlaces</h5><h5 data-lang="en">Links</h5>
@@ -682,7 +720,7 @@
   </div>
 </footer>
 
-<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico"><use href="#i-chat"/></svg></a>
 
 <script>
 /* =========================================================================
@@ -920,22 +958,24 @@ function setLang(l){
 /* ---- plans (within 1h drive of O Barqueiro) ------------------------- */
 var HOME="Estrada Viveiro 55, 15337 O Barqueiro, A Coruña";
 function dir(dest){ return "https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(HOME)+"&destination="+encodeURIComponent(dest); }
+/* Landmark photos: Wikimedia Commons via Special:FilePath (freely licensed) */
+function wimg(f){ return "https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(f)+"?width=800"; }
 var PLANS=[
-  {band:"near",min:"5 min",es:["Puerto de O Barqueiro","Pasear por el puerto pesquero, terrazas junto al agua y salida de kayak por la ría."],en:["O Barqueiro harbour","Stroll the fishing harbour, waterfront terraces and kayak launch into the estuary."],map:dir("Porto do Barqueiro, Mañón, A Coruña"),info:"https://aventurasengalicia.com/actividad/kayak-de-mar-en-el-puerto-de-o-barqueiro-ria-de-o-barqueiro-estaca-de-bares/"},
-  {band:"near",min:"6 min",es:["Playa de Arealonga","Arena fina y aguas tranquilas dentro de la ría, ideal con niños. A 19 min a pie de la casa."],en:["Arealonga beach","Fine sand and calm estuary water, great with kids. A 19-minute walk from the house."],map:dir("Praia de Arealonga O Barqueiro")},
-  {band:"near",min:"12 min",es:["Estaca de Bares y su faro","El punto más al norte de la Península Ibérica: faro, semáforo, miradores y puesta de sol sobre el Cantábrico."],en:["Estaca de Bares & lighthouse","The northernmost point of the Iberian Peninsula: lighthouse, viewpoints and sunset over the Cantabrian Sea."],map:dir("Punta Estaca de Bares Faro")},
-  {band:"near",min:"12 min",es:["Porto de Bares y Coído","Puerto natural con dique de origen romano-fenicio, playa resguardada y marisco en los chiringuitos."],en:["Porto de Bares & Coído","Natural harbour with a Roman-Phoenician breakwater, a sheltered beach and seafood shacks."],map:dir("Porto de Bares")},
-  {band:"near",min:"12 min",es:["Playa de Xilloi (O Vicedo)","Bandera azul, arena fina y aguas resguardadas. Una de las mejores playas de la Mariña lucense."],en:["Xilloi beach (O Vicedo)","Blue-flag beach, fine sand and sheltered water — one of the best on the Mariña coast."],map:dir("Praia de Xilloi O Vicedo")},
-  {band:"mid",min:"18 min",es:["Acantilados de Loiba","El famoso «mejor banco del mundo» asomado a acantilados verdes sobre el mar."],en:["Loiba cliffs","The famous “best bench in the world” perched on green cliffs above the sea."],map:dir("Acantilados de Loiba banco")},
-  {band:"mid",min:"25 min",es:["Punta Fuciño do Porco","Península de acantilados con un sendero y tramos de pasarela hasta el faro. Reserva de plaza recomendada en verano."],en:["Punta Fuciño do Porco","A cliff headland with a trail and boardwalk sections out to the lighthouse. Book a slot in summer."],map:dir("Punta Fuciño do Porco San Cibrao"),info:"https://www.puntafucinodoporco.gal/es/reservas"},
-  {band:"mid",min:"28 min",es:["Viveiro casco histórico","Villa medieval amurallada con la Porta de Carlos V, plazas con soportales y buenas tabernas."],en:["Viveiro old town","Walled medieval town with the Porta de Carlos V gate, arcaded squares and good taverns."],map:dir("Porta de Carlos V Viveiro")},
-  {band:"mid",min:"30 min",es:["Playa de Area (Viveiro)","Gran arenal abierto al Cantábrico, perfecto para paseos largos y surf suave."],en:["Area beach (Viveiro)","Wide sandy beach open to the Cantabrian Sea, great for long walks and gentle surf."],map:dir("Praia de Area Viveiro")},
-  {band:"mid",min:"32 min",es:["Ría de Ortigueira y Espasante","Marismas, aves y los pueblos marineros de Espasante y Ortigueira, cuna del festival celta."],en:["Ortigueira estuary & Espasante","Marshland, birdlife and the fishing villages of Espasante and Ortigueira, home of the Celtic festival."],map:dir("Espasante, Ortigueira")},
-  {band:"far",min:"38 min",es:["Sargadelos (Cervo)","Fábrica y museo de la mítica cerámica azul gallega; visitas y tienda de fábrica."],en:["Sargadelos (Cervo)","Factory and museum of Galicia's iconic blue ceramics; tours and factory shop."],map:dir("Sargadelos fábrica Cervo"),info:"https://www.sargadelos.com"},
-  {band:"far",min:"45 min",es:["Cabo Ortegal (Cariño)","Acantilados donde se encuentran el Cantábrico y el Atlántico, con Os Aguillóns y faro."],en:["Cabo Ortegal (Cariño)","Cliffs where the Cantabrian Sea meets the Atlantic, with the Aguillóns sea stacks and lighthouse."],map:dir("Cabo Ortegal faro Cariño")},
-  {band:"far",min:"50 min",es:["Garita de Herbeira","Uno de los acantilados más altos de Europa continental (600 m), en la Serra da Capelada."],en:["Garita de Herbeira","One of the highest sea cliffs in continental Europe (600 m), in the Serra da Capelada."],map:dir("Garita da Herbeira mirador")},
-  {band:"far",min:"52 min",es:["San Andrés de Teixido","Santuario de peregrinación entre acantilados: «vai de morto quen non foi de vivo»."],en:["San Andrés de Teixido","Cliff-top pilgrimage sanctuary — legend says you go there dead if you didn't go alive."],map:dir("San Andrés de Teixido")},
-  {band:"far",min:"58 min",es:["Praia das Catedrais (Ribadeo)","Arcos y bóvedas de roca de hasta 30 m en bajamar. Reserva gratuita obligatoria en Semana Santa y verano."],en:["Praia das Catedrais (Ribadeo)","Rock arches up to 30 m high at low tide. Free booking required at Easter and in summer."],map:dir("Praia das Catedrais Ribadeo"),info:"https://ascatedrais.xunta.gal/monatr/inicio?lang=es"}
+  {band:"near",min:"5 min",img:"2025 Porto do Porto do Barqueiro. Galiza.jpg",es:["Puerto de O Barqueiro","Pasear por el puerto pesquero, terrazas junto al agua y salida de kayak por la ría."],en:["O Barqueiro harbour","Stroll the fishing harbour, waterfront terraces and kayak launch into the estuary."],map:dir("Porto do Barqueiro, Mañón, A Coruña"),info:"https://aventurasengalicia.com/actividad/kayak-de-mar-en-el-puerto-de-o-barqueiro-ria-de-o-barqueiro-estaca-de-bares/"},
+  {band:"near",min:"6 min",img:"O Barqueiro 4IX2015.jpg",es:["Playa de Arealonga","Arena fina y aguas tranquilas dentro de la ría, ideal con niños. A 19 min a pie de la casa."],en:["Arealonga beach","Fine sand and calm estuary water, great with kids. A 19-minute walk from the house."],map:dir("Praia de Arealonga O Barqueiro")},
+  {band:"near",min:"12 min",img:"Cabo - Punta Estaca de Bares.JPG",es:["Estaca de Bares y su faro","El punto más al norte de la Península Ibérica: faro, semáforo, miradores y puesta de sol sobre el Cantábrico."],en:["Estaca de Bares & lighthouse","The northernmost point of the Iberian Peninsula: lighthouse, viewpoints and sunset over the Cantabrian Sea."],map:dir("Punta Estaca de Bares Faro")},
+  {band:"near",min:"12 min",img:"Praia de Bares 4IX2015.jpg",es:["Porto de Bares y Coído","Puerto natural con dique de origen romano-fenicio, playa resguardada y marisco en los chiringuitos."],en:["Porto de Bares & Coído","Natural harbour with a Roman-Phoenician breakwater, a sheltered beach and seafood shacks."],map:dir("Porto de Bares")},
+  {band:"near",min:"12 min",img:"Playa de Xilloi 02.jpg",es:["Playa de Xilloi (O Vicedo)","Bandera azul, arena fina y aguas resguardadas. Una de las mejores playas de la Mariña lucense."],en:["Xilloi beach (O Vicedo)","Blue-flag beach, fine sand and sheltered water — one of the best on the Mariña coast."],map:dir("Praia de Xilloi O Vicedo")},
+  {band:"mid",min:"18 min",img:"Banco en los acantilados de Loiba Ortigueira A Coruña.jpg",es:["Acantilados de Loiba","El famoso «mejor banco del mundo» asomado a acantilados verdes sobre el mar."],en:["Loiba cliffs","The famous “best bench in the world” perched on green cliffs above the sea."],map:dir("Acantilados de Loiba banco")},
+  {band:"mid",min:"25 min",img:"DSC06545 Fuciño do Porco (Punta Socastro) en O Vicedo (Lugo, Galicia).jpg",es:["Punta Fuciño do Porco","Península de acantilados con un sendero y tramos de pasarela hasta el faro. Reserva de plaza recomendada en verano."],en:["Punta Fuciño do Porco","A cliff headland with a trail and boardwalk sections out to the lighthouse. Book a slot in summer."],map:dir("Punta Fuciño do Porco San Cibrao"),info:"https://www.puntafucinodoporco.gal/es/reservas"},
+  {band:"mid",min:"28 min",img:"Rúa Alexandre Bóveda.001 - Viveiro.jpg",es:["Viveiro casco histórico","Villa medieval amurallada con la Porta de Carlos V, plazas con soportales y buenas tabernas."],en:["Viveiro old town","Walled medieval town with the Porta de Carlos V gate, arcaded squares and good taverns."],map:dir("Porta de Carlos V Viveiro")},
+  {band:"mid",min:"30 min",img:"Praia de Area, Viveiro 2.jpg",es:["Playa de Area (Viveiro)","Gran arenal abierto al Cantábrico, perfecto para paseos largos y surf suave."],en:["Area beach (Viveiro)","Wide sandy beach open to the Cantabrian Sea, great for long walks and gentle surf."],map:dir("Praia de Area Viveiro")},
+  {band:"mid",min:"32 min",img:"Festival Internacional del Mundo Celta de Ortigueira.jpg",es:["Ría de Ortigueira y Espasante","Marismas, aves y los pueblos marineros de Espasante y Ortigueira, cuna del festival celta."],en:["Ortigueira estuary & Espasante","Marshland, birdlife and the fishing villages of Espasante and Ortigueira, home of the Celtic festival."],map:dir("Espasante, Ortigueira")},
+  {band:"far",min:"38 min",img:"Pazo do Marqués, Sargadelos.jpg",es:["Sargadelos (Cervo)","Fábrica y museo de la mítica cerámica azul gallega; visitas y tienda de fábrica."],en:["Sargadelos (Cervo)","Factory and museum of Galicia's iconic blue ceramics; tours and factory shop."],map:dir("Sargadelos fábrica Cervo"),info:"https://www.sargadelos.com"},
+  {band:"far",min:"45 min",img:"Kap Ortegal1.JPG",es:["Cabo Ortegal (Cariño)","Acantilados donde se encuentran el Cantábrico y el Atlántico, con Os Aguillóns y faro."],en:["Cabo Ortegal (Cariño)","Cliffs where the Cantabrian Sea meets the Atlantic, with the Aguillóns sea stacks and lighthouse."],map:dir("Cabo Ortegal faro Cariño")},
+  {band:"far",min:"50 min",img:"Serra da capelada por Herbeira.jpg",es:["Garita de Herbeira","Uno de los acantilados más altos de Europa continental (600 m), en la Serra da Capelada."],en:["Garita de Herbeira","One of the highest sea cliffs in continental Europe (600 m), in the Serra da Capelada."],map:dir("Garita da Herbeira mirador")},
+  {band:"far",min:"52 min",img:"Teixido1.jpg",es:["San Andrés de Teixido","Santuario de peregrinación entre acantilados: «vai de morto quen non foi de vivo»."],en:["San Andrés de Teixido","Cliff-top pilgrimage sanctuary — legend says you go there dead if you didn't go alive."],map:dir("San Andrés de Teixido")},
+  {band:"far",min:"58 min",img:"Praia de Augas Santas ou das Catedrais. Devesa. Ribadeo. Galiza-04.jpg",es:["Praia das Catedrais (Ribadeo)","Arcos y bóvedas de roca de hasta 30 m en bajamar. Reserva gratuita obligatoria en Semana Santa y verano."],en:["Praia das Catedrais (Ribadeo)","Rock arches up to 30 m high at low tide. Free booking required at Easter and in summer."],map:dir("Praia das Catedrais Ribadeo"),info:"https://ascatedrais.xunta.gal/monatr/inicio?lang=es"}
 ];
 var EAT=[
   {es:["Restaurante A Sobreposta","Pescado y marisco con vistas a la ría, en O Barqueiro."],en:["Restaurante A Sobreposta","Fish and seafood with estuary views, in O Barqueiro."],map:dir("Restaurante A Sobreposta O Barqueiro"),info:"https://www.asobreposta.es"},
@@ -946,20 +986,23 @@ function renderPlans(){
   var active=document.querySelector(".plan-tabs button.active");
   var filter=active?active.getAttribute("data-filter"):"all";
   var bandLabel={near:{es:"5–12 min",en:"5–12 min"},mid:{es:"15–35 min",en:"15–35 min"},far:{es:"35–60 min",en:"35–60 min"}};
+  var carIco='<svg class="ico ico-sm"><use href="#i-route"/></svg>';
+  var eatIco='<svg class="ico ico-sm"><use href="#i-kitchen"/></svg>';
   grid.innerHTML="";
   PLANS.filter(function(p){return filter==="all"||p.band===filter;}).forEach(function(p){
     var t=p[l], links='<a href="'+p.map+'" target="_blank" rel="noopener">'+(l==="en"?"Directions ↗":"Cómo llegar ↗")+'</a>';
     if(p.info) links+='<a href="'+p.info+'" target="_blank" rel="noopener">'+(l==="en"?"More info ↗":"Más info ↗")+'</a>';
     var c=document.createElement("div"); c.className="plan-card";
-    c.innerHTML='<span class="tag">🚗 '+p.min+' · '+bandLabel[p.band][l]+'</span><h4>'+t[0]+'</h4><p>'+t[1]+'</p><div class="plan-links">'+links+'</div>';
+    var pic=p.img?'<img class="pc-img" loading="lazy" alt="'+t[0]+'" src="'+wimg(p.img)+'">':'';
+    c.innerHTML=pic+'<div class="pc-body"><span class="tag">'+carIco+' '+p.min+' · '+bandLabel[p.band][l]+'</span><h4>'+t[0]+'</h4><p>'+t[1]+'</p><div class="plan-links">'+links+'</div></div>';
     grid.appendChild(c);
   });
   if(filter==="all"){
     EAT.forEach(function(p){
       var t=p[l];
       var links='<a href="'+p.map+'" target="_blank" rel="noopener">'+(l==="en"?"Directions ↗":"Cómo llegar ↗")+'</a><a href="'+p.info+'" target="_blank" rel="noopener">'+(l==="en"?"Website ↗":"Web ↗")+'</a>';
-      var c=document.createElement("div"); c.className="plan-card";
-      c.innerHTML='<span class="tag">🍽️ '+(l==="en"?"Where to eat":"Dónde comer")+'</span><h4>'+t[0]+'</h4><p>'+t[1]+'</p><div class="plan-links">'+links+'</div>';
+      var c=document.createElement("div"); c.className="plan-card no-img";
+      c.innerHTML='<div class="pc-body"><span class="tag">'+eatIco+' '+(l==="en"?"Where to eat":"Dónde comer")+'</span><h4>'+t[0]+'</h4><p>'+t[1]+'</p><div class="plan-links">'+links+'</div></div>';
       grid.appendChild(c);
     });
   }
