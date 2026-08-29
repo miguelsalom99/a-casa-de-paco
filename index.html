@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Casa de Paco · O Barqueiro, Galicia</title>
-<meta name="description" content="A Casa de Paco — casa completa de 4 dormitorios (113 m²) a un paseo de la playa de Arealonga, en O Barqueiro (Galicia). Disponibilidad, calendario y reserva directa por WhatsApp, Airbnb o Booking.com.">
+<meta name="description" content="A Casa de Paco — alojamiento de 4 dormitorios (113 m²) a un paseo de la playa de Arealonga, en O Barqueiro (Galicia). Disponibilidad, calendario y reserva directa por WhatsApp, Airbnb o Booking.com.">
 <meta property="og:title" content="A Casa de Paco · O Barqueiro, Galicia">
-<meta property="og:description" content="Casa completa de 4 dormitorios frente a la ría de O Barqueiro. Reserva directa por WhatsApp.">
+<meta property="og:description" content="Alojamiento de 4 dormitorios a un paseo de la playa de Arealonga, en O Barqueiro. Reserva directa por WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓</text></svg>">
@@ -104,12 +104,12 @@
   .hero-badges span{display:inline-flex;align-items:center;gap:7px;}
 
   /* PHOTO STRIP */
-  .strip{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;padding-top:12px;}
-  .strip a{border-radius:var(--r-lg);overflow:hidden;display:block;aspect-ratio:4/3;}
-  .strip a:first-child{aspect-ratio:auto;}
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:10px;padding-top:12px;}
+  .strip a{border-radius:var(--r-lg);overflow:hidden;display:block;}
+  .strip a:first-child{grid-column:span 2;grid-row:span 2;}
   .strip img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease;}
   .strip a:hover img{transform:scale(1.03);}
-  @media (max-width:760px){ .strip{grid-template-columns:1fr 1fr;} .strip a:first-child{grid-column:span 2;aspect-ratio:16/9;} }
+  @media (max-width:760px){ .strip{grid-template-columns:1fr 1fr;grid-auto-rows:120px;} .strip a:first-child{grid-column:span 2;grid-row:span 2;} }
 
   /* SECTIONS */
   section.block{padding:80px 0;}
@@ -143,7 +143,8 @@
   .rooms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
   .room-card{background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);}
   .room-card img{height:150px;width:100%;object-fit:cover;}
-  .room-card .body{padding:16px 18px;}
+  .room-card .body{padding:24px 20px;}
+  .room-card .rc-ic{font-size:28px;margin-bottom:10px;line-height:1;}
   .room-card h4{margin:0 0 6px;color:var(--sea-deep);font-size:16px;}
   .room-card p{margin:0;font-size:13px;color:var(--stone);}
   @media (max-width:860px){.rooms-grid{grid-template-columns:repeat(2,1fr);}}
@@ -317,11 +318,11 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="wrap">
-    <span class="eyebrow">⚓ <span data-lang="es">Casa completa · desde 1928 en O Barqueiro</span><span data-lang="en">Whole house · in O Barqueiro since 1928</span></span>
+    <span class="eyebrow">⚓ <span data-lang="es">O Barqueiro · a un paseo de la playa</span><span data-lang="en">O Barqueiro · a short walk from the beach</span></span>
     <h1 data-lang="es">Donde la ría gallega se encuentra con la calma</h1>
     <h1 data-lang="en">Where the Galician estuary meets calm</h1>
-    <p class="lead" data-lang="es">Una casa amplia y luminosa de 113 m² a un paseo de la playa de Arealonga, en uno de los rincones más auténticos de la costa gallega. Cuatro dormitorios, jardín y terraza privada. Ideal para familias y grupos de hasta 7 personas.</p>
-    <p class="lead" data-lang="en">A bright, spacious 113 m² house a short walk from Arealonga beach, in one of the most authentic corners of the Galician coast. Four bedrooms, garden and private terrace. Perfect for families and groups of up to 7.</p>
+    <p class="lead" data-lang="es">Un alojamiento amplio y luminoso de 113 m² a un paseo de la playa de Arealonga, en uno de los rincones más auténticos de la costa gallega. Cuatro dormitorios, jardín y patio exterior. Ideal para familias y grupos de hasta 7 personas.</p>
+    <p class="lead" data-lang="en">A bright, spacious 113 m² home a short walk from Arealonga beach, in one of the most authentic corners of the Galician coast. Four bedrooms, garden and outdoor patio. Perfect for families and groups of up to 7.</p>
 
     <div class="search-card">
       <div class="fld">
@@ -353,9 +354,11 @@
     </div>
 
     <div class="strip">
-      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg" alt="A Casa de Paco - dormitorio principal"></a>
-      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/e1fbe1f7-474f-442a-8286-35f1287dbd83.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/e1fbe1f7-474f-442a-8286-35f1287dbd83.jpeg" alt="A Casa de Paco - salón"></a>
-      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/2348b507-b2a8-4d84-9938-6a941be8b13e.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/2348b507-b2a8-4d84-9938-6a941be8b13e.jpeg" alt="A Casa de Paco - dormitorio"></a>
+      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg" alt="A Casa de Paco — foto 1"></a>
+      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/e1fbe1f7-474f-442a-8286-35f1287dbd83.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/e1fbe1f7-474f-442a-8286-35f1287dbd83.jpeg" alt="A Casa de Paco — foto 2"></a>
+      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/2348b507-b2a8-4d84-9938-6a941be8b13e.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/2348b507-b2a8-4d84-9938-6a941be8b13e.jpeg" alt="A Casa de Paco — foto 3"></a>
+      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/79e8e7dd-f8ec-4f29-a16f-815ed2bbaea5.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/79e8e7dd-f8ec-4f29-a16f-815ed2bbaea5.jpeg" alt="A Casa de Paco — foto 4"></a>
+      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/20a0508c-2cf2-4e40-821c-a424e7128b26.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/20a0508c-2cf2-4e40-821c-a424e7128b26.jpeg" alt="A Casa de Paco — foto 5"></a>
     </div>
   </div>
 </section>
@@ -370,12 +373,12 @@
       <div class="kicker" data-lang="es">La casa</div><div class="kicker" data-lang="en">The house</div>
       <h2 data-lang="es">Espacio de sobra, a tu ritmo</h2>
       <h2 data-lang="en">Plenty of space, at your own pace</h2>
-      <p data-lang="es">A Casa de Paco ocupa la primera planta de una casa gallega, con entrada independiente, jardín y terraza propia. 113 m² totalmente equipados: tres dormitorios dobles, un dormitorio individual, un amplio salón con dos sofás cama, cocina completa y un baño con ducha. Vistas a la montaña, al jardín y al pueblo, en un entorno tranquilo del puerto de O Barqueiro.</p>
-      <p data-lang="en">A Casa de Paco occupies the first floor of a Galician house, with its own entrance, garden and private terrace. 113 m² fully equipped: three double bedrooms, one single bedroom, a spacious living room with two sofa beds, a full kitchen and one bathroom with shower. Mountain, garden and village views, in a quiet corner of O Barqueiro harbour.</p>
+      <p data-lang="es">A Casa de Paco ocupa la primera planta de una casa gallega, con entrada independiente, jardín y patio exterior. 113 m² totalmente equipados: tres dormitorios dobles, un dormitorio individual, un amplio salón con dos sofás, cocina completa y dos baños con ducha. Vistas a la montaña, al jardín y al pueblo, en un entorno tranquilo del puerto de O Barqueiro.</p>
+      <p data-lang="en">A Casa de Paco occupies the first floor of a Galician house, with its own entrance, garden and outdoor patio. 113 m² fully equipped: three double bedrooms, one single bedroom, a spacious living room with two sofas, a full kitchen and two bathrooms with shower. Mountain, garden and village views, in a quiet corner of O Barqueiro harbour.</p>
       <div class="stat-row">
         <div class="stat"><b>113 m²</b><span data-lang="es">Superficie</span><span data-lang="en">Floor area</span></div>
         <div class="stat"><b>4</b><span data-lang="es">Dormitorios</span><span data-lang="en">Bedrooms</span></div>
-        <div class="stat"><b>1</b><span data-lang="es">Baño</span><span data-lang="en">Bathroom</span></div>
+        <div class="stat"><b>2</b><span data-lang="es">Baños</span><span data-lang="en">Bathrooms</span></div>
         <div class="stat"><b>7</b><span data-lang="es">Huéspedes</span><span data-lang="en">Guests</span></div>
       </div>
     </div>
@@ -394,9 +397,9 @@
     </div>
     <div class="amen-grid">
       <div class="amen-card"><div class="ic">🚗</div><h4 data-lang="es">Parking gratis in situ</h4><h4 data-lang="en">Free parking on site</h4><p data-lang="es">En la propiedad</p><p data-lang="en">On the property</p></div>
-      <div class="amen-card"><div class="ic">🌳</div><h4 data-lang="es">Jardín, patio y terraza</h4><h4 data-lang="en">Garden, patio &amp; terrace</h4><p data-lang="es">Espacio exterior privado</p><p data-lang="en">Private outdoor space</p></div>
+      <div class="amen-card"><div class="ic">🌳</div><h4 data-lang="es">Jardín y patio exterior</h4><h4 data-lang="en">Garden &amp; outdoor patio</h4><p data-lang="es">Espacio exterior privado</p><p data-lang="en">Private outdoor space</p></div>
       <div class="amen-card"><div class="ic">🍳</div><h4 data-lang="es">Cocina completa</h4><h4 data-lang="en">Full kitchen</h4><p data-lang="es">Nevera, cafetera, lavadora</p><p data-lang="en">Fridge, coffee maker, washer</p></div>
-      <div class="amen-card"><div class="ic">📺</div><h4 data-lang="es">TV pantalla plana + wifi</h4><h4 data-lang="en">Flat-screen TV + wifi</h4><p data-lang="es">Salón amplio</p><p data-lang="en">Spacious living room</p></div>
+      <div class="amen-card"><div class="ic">📺</div><h4 data-lang="es">TV de pantalla plana</h4><h4 data-lang="en">Flat-screen TV</h4><p data-lang="es">En el salón</p><p data-lang="en">In the living room</p></div>
       <div class="amen-card"><div class="ic">🏔️</div><h4 data-lang="es">Vistas montaña, jardín y pueblo</h4><h4 data-lang="en">Mountain, garden &amp; village views</h4><p data-lang="es">Luz natural todo el día</p><p data-lang="en">Natural light all day</p></div>
       <div class="amen-card"><div class="ic">🚪</div><h4 data-lang="es">Entrada independiente</h4><h4 data-lang="en">Private entrance</h4><p data-lang="es">Primera planta de casa</p><p data-lang="en">First floor of a house</p></div>
       <div class="amen-card"><div class="ic">🛌</div><h4 data-lang="es">Ropa de cama incluida</h4><h4 data-lang="en">Linens included</h4><p data-lang="es">Secador y amenities</p><p data-lang="en">Hair dryer &amp; toiletries</p></div>
@@ -415,20 +418,16 @@
     </div>
     <div class="rooms-grid">
       <div class="room-card">
-        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/2348b507-b2a8-4d84-9938-6a941be8b13e.jpeg" alt="Dormitorio doble">
-        <div class="body"><h4 data-lang="es">3 dormitorios dobles</h4><h4 data-lang="en">3 double bedrooms</h4><p data-lang="es">Camas de matrimonio y armario</p><p data-lang="en">Double beds and wardrobe</p></div>
+        <div class="body"><div class="rc-ic">🛏️</div><h4 data-lang="es">3 dormitorios dobles</h4><h4 data-lang="en">3 double bedrooms</h4><p data-lang="es">Camas de matrimonio y armario</p><p data-lang="en">Double beds and wardrobe</p></div>
       </div>
       <div class="room-card">
-        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/27a67ca8-3b31-497f-a6a3-6739fe32546e.jpeg" alt="Dormitorio individual">
-        <div class="body"><h4 data-lang="es">1 dormitorio individual</h4><h4 data-lang="en">1 single bedroom</h4><p data-lang="es">Ideal para niños o solo/a</p><p data-lang="en">Great for kids or solo guests</p></div>
+        <div class="body"><div class="rc-ic">🛏️</div><h4 data-lang="es">1 dormitorio individual</h4><h4 data-lang="en">1 single bedroom</h4><p data-lang="es">Ideal para niños o para viajar solo/a</p><p data-lang="en">Great for kids or solo guests</p></div>
       </div>
       <div class="room-card">
-        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/1fbf8396-ec64-4b61-a8f0-3c5906a8d44f.jpeg" alt="Salón con sofás cama">
-        <div class="body"><h4 data-lang="es">Salón con 2 sofás cama</h4><h4 data-lang="en">Living room, 2 sofa beds</h4><p data-lang="es">Capacidad extra si hace falta</p><p data-lang="en">Extra capacity if needed</p></div>
+        <div class="body"><div class="rc-ic">🛋️</div><h4 data-lang="es">Salón con 2 sofás</h4><h4 data-lang="en">Living room with 2 sofas</h4><p data-lang="es">Amplio y luminoso, con TV</p><p data-lang="en">Bright and spacious, with TV</p></div>
       </div>
       <div class="room-card">
-        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/20a0508c-2cf2-4e40-821c-a424e7128b26.jpeg" alt="Baño con ducha">
-        <div class="body"><h4 data-lang="es">1 baño con ducha</h4><h4 data-lang="en">1 bathroom with shower</h4><p data-lang="es">Baño privado del alojamiento</p><p data-lang="en">Private to the apartment</p></div>
+        <div class="body"><div class="rc-ic">🚿</div><h4 data-lang="es">2 baños con ducha</h4><h4 data-lang="en">2 bathrooms with shower</h4><p data-lang="es">Privados del alojamiento</p><p data-lang="en">Private to the accommodation</p></div>
       </div>
     </div>
   </div>
@@ -481,6 +480,9 @@
           </a>
           <a class="btn btn-secondary" id="calAirbnb" href="https://www.airbnb.es/rooms/865260422376480197" target="_blank" rel="noopener">
             <span data-lang="es">Reservar en Airbnb ↗</span><span data-lang="en">Book on Airbnb ↗</span>
+          </a>
+          <a class="btn btn-secondary" id="calBooking" href="https://www.booking.com/Share-wODzsN" target="_blank" rel="noopener">
+            <span data-lang="es">Reservar en Booking.com ↗</span><span data-lang="en">Book on Booking.com ↗</span>
           </a>
           <p class="cal-note">
             <span data-lang="es">Disponibilidad sincronizada con Airbnb y Booking · actualizado 29/08/2026.<br>Confirmación final siempre con Carmen o la plataforma.</span>
@@ -556,9 +558,9 @@
       <h2 data-lang="en">O Barqueiro, A Coruña</h2>
     </div>
     <div class="location-grid">
-      <iframe src="https://www.google.com/maps?q=43.73596,-7.70722&hl=es&z=14&output=embed" loading="lazy" allowfullscreen title="Mapa de A Casa de Paco"></iframe>
+      <iframe src="https://www.google.com/maps?q=Estrada+Viveiro+55,+15337+O+Barqueiro,+A+Coru%C3%B1a&hl=es&z=15&output=embed" loading="lazy" allowfullscreen title="Mapa de A Casa de Paco"></iframe>
       <ul class="loc-list">
-        <li><span class="ic">📍</span><div><b data-lang="es">Dirección</b><b data-lang="en">Address</b><span>Estrada Viveiro 55, 15337 O Barqueiro, A Coruña, Galicia · <a href="https://www.google.com/maps/dir/?api=1&destination=43.73596,-7.70722" target="_blank" rel="noopener" style="color:var(--sea)">Cómo llegar ↗</a></span></div></li>
+        <li><span class="ic">📍</span><div><b data-lang="es">Dirección</b><b data-lang="en">Address</b><span>Estrada Viveiro 55, 15337 O Barqueiro, A Coruña, Galicia · <a href="https://www.google.com/maps/dir/?api=1&destination=Estrada+Viveiro+55,+15337+O+Barqueiro,+A+Coru%C3%B1a" target="_blank" rel="noopener" style="color:var(--sea)">Cómo llegar ↗</a></span></div></li>
         <li><span class="ic">🏖️</span><div><b data-lang="es">Playa de Arealonga</b><b data-lang="en">Arealonga beach</b><span data-lang="es">1,4 km · unos 19 min a pie</span><span data-lang="en">1.4 km · about a 19-minute walk</span></div></li>
         <li><span class="ic">🚆</span><div><b data-lang="es">Estación de tren O Barqueiro (FEVE)</b><b data-lang="en">O Barqueiro train station (FEVE)</b><span data-lang="es">Línea Ferrol–Ribadeo–Oviedo, a 5 min</span><span data-lang="en">Ferrol–Ribadeo–Oviedo line, 5 min away</span></div></li>
         <li><span class="ic">✈️</span><div><b data-lang="es">Aeropuertos</b><b data-lang="en">Airports</b><span data-lang="es">A Coruña 100 km · Asturias 135 km · Santiago 160 km</span><span data-lang="en">A Coruña 100 km · Asturias 135 km · Santiago 160 km</span></div></li>
@@ -584,7 +586,7 @@
         <p class="price-note" data-lang="es">Trato directo con la anfitriona. Sin comisiones de plataforma.</p>
         <p class="price-note" data-lang="en">Deal directly with your host. No platform fees.</p>
         <ul>
-          <li data-lang="es">Respuesta en menos de 1 hora</li><li data-lang="en">Reply within 1 hour</li>
+          <li data-lang="es">Respuesta rápida de la anfitriona</li><li data-lang="en">Fast reply from the host</li>
           <li data-lang="es">Precio y condiciones flexibles</li><li data-lang="en">Flexible price &amp; terms</li>
           <li data-lang="es">Consejos locales personalizados</li><li data-lang="en">Personalised local tips</li>
         </ul>
@@ -632,11 +634,11 @@
       <div>
         <h3 data-lang="es">Tu anfitriona: Carmen</h3>
         <h3 data-lang="en">Your host: Carmen</h3>
-        <p data-lang="es">Carmen lleva 3 años recibiendo huéspedes en O Barqueiro, con una tasa de respuesta del 100 % en menos de una hora. Siempre disponible para recomendarte los mejores rincones de la zona.</p>
-        <p data-lang="en">Carmen has been welcoming guests in O Barqueiro for 3 years, with a 100% response rate within one hour. Always happy to recommend the best spots in the area.</p>
+        <p data-lang="es">Carmen lleva 3 años recibiendo huéspedes en O Barqueiro, con una tasa de respuesta del 100 % y respuesta rápida. Siempre disponible para recomendarte los mejores rincones de la zona.</p>
+        <p data-lang="en">Carmen has been welcoming guests in O Barqueiro for 3 years, with a 100% response rate and quick replies. Always happy to recommend the best spots in the area.</p>
         <div class="badge-row">
           <span class="badge" data-lang="es">⭐ 100 % respuesta</span><span class="badge" data-lang="en">⭐ 100% response rate</span>
-          <span class="badge" data-lang="es">⏱️ Responde en 1 hora</span><span class="badge" data-lang="en">⏱️ Replies within an hour</span>
+          <span class="badge" data-lang="es">⏱️ Respuesta rápida</span><span class="badge" data-lang="en">⏱️ Quick to reply</span>
           <span class="badge" data-lang="es">🏡 3 años como anfitriona</span><span class="badge" data-lang="en">🏡 3 years hosting</span>
         </div>
       </div>
@@ -756,13 +758,20 @@ function refreshWaLinks(){
   });
 }
 
-/* ---- Airbnb deep link with dates ----------------------------------- */
+/* ---- platform deep links with dates -------------------------------- */
 function airbnbLink(){
   var base = "https://www.airbnb.es/rooms/865260422376480197";
   if(sel.in && sel.out){
     return base + "?check_in="+ymd(sel.in)+"&check_out="+ymd(sel.out)+"&adults="+sel.guests;
   }
   return base;
+}
+function bookingLink(){
+  var base = "https://www.booking.com/hotel/es/a-casa-de-paco-o-barqueiro.es.html";
+  if(sel.in && sel.out){
+    return base + "?checkin="+ymd(sel.in)+"&checkout="+ymd(sel.out)+"&group_adults="+sel.guests+"&no_rooms=1";
+  }
+  return "https://www.booking.com/Share-wODzsN";
 }
 
 /* ---- calendar rendering -------------------------------------------- */
@@ -836,6 +845,7 @@ function syncSelectionUI(){
   var msgEn = document.getElementById("calMsgEn");
   var waBtn = document.getElementById("calWa");
   var abBtn = document.getElementById("calAirbnb");
+  var bkBtn = document.getElementById("calBooking");
 
   document.getElementById("selIn").textContent  = sel.in  ? fmt(sel.in)  : "—";
   document.getElementById("selOut").textContent = sel.out ? fmt(sel.out) : "—";
@@ -868,6 +878,7 @@ function syncSelectionUI(){
   waBtn.setAttribute("aria-disabled", ready ? "false" : "true");
   waBtn.href = waLink(bookingMsg());
   abBtn.href = airbnbLink();
+  bkBtn.href = bookingLink();
 
   // mirror into hero + guests
   var hi=document.getElementById("hIn"), ho=document.getElementById("hOut");
@@ -907,19 +918,19 @@ function setLang(l){
 }
 
 /* ---- plans (within 1h drive of O Barqueiro) ------------------------- */
-var HOME="43.73596,-7.70722";
-function dir(dest){ return "https://www.google.com/maps/dir/?api=1&origin="+HOME+"&destination="+encodeURIComponent(dest); }
+var HOME="Estrada Viveiro 55, 15337 O Barqueiro, A Coruña";
+function dir(dest){ return "https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(HOME)+"&destination="+encodeURIComponent(dest); }
 var PLANS=[
-  {band:"near",min:"5 min",es:["Puerto de O Barqueiro","Pasear por el puerto pesquero, terrazas junto al agua y salida de kayak por la ría."],en:["O Barqueiro harbour","Stroll the fishing harbour, waterfront terraces and kayak launch into the estuary."],map:dir("Porto do Barqueiro"),info:"https://aventurasengalicia.com/actividad/kayak-de-mar-en-el-puerto-de-o-barqueiro-ria-de-o-barqueiro-estaca-de-bares/"},
+  {band:"near",min:"5 min",es:["Puerto de O Barqueiro","Pasear por el puerto pesquero, terrazas junto al agua y salida de kayak por la ría."],en:["O Barqueiro harbour","Stroll the fishing harbour, waterfront terraces and kayak launch into the estuary."],map:dir("Porto do Barqueiro, Mañón, A Coruña"),info:"https://aventurasengalicia.com/actividad/kayak-de-mar-en-el-puerto-de-o-barqueiro-ria-de-o-barqueiro-estaca-de-bares/"},
   {band:"near",min:"6 min",es:["Playa de Arealonga","Arena fina y aguas tranquilas dentro de la ría, ideal con niños. A 19 min a pie de la casa."],en:["Arealonga beach","Fine sand and calm estuary water, great with kids. A 19-minute walk from the house."],map:dir("Praia de Arealonga O Barqueiro")},
   {band:"near",min:"12 min",es:["Estaca de Bares y su faro","El punto más al norte de la Península Ibérica: faro, semáforo, miradores y puesta de sol sobre el Cantábrico."],en:["Estaca de Bares & lighthouse","The northernmost point of the Iberian Peninsula: lighthouse, viewpoints and sunset over the Cantabrian Sea."],map:dir("Punta Estaca de Bares Faro")},
   {band:"near",min:"12 min",es:["Porto de Bares y Coído","Puerto natural con dique de origen romano-fenicio, playa resguardada y marisco en los chiringuitos."],en:["Porto de Bares & Coído","Natural harbour with a Roman-Phoenician breakwater, a sheltered beach and seafood shacks."],map:dir("Porto de Bares")},
-  {band:"near",min:"12 min",es:["Playa de Xilloi (O Vicedo)","Bandera azul, arena blanca y vistas a la isla Coelleira. Una de las mejores playas de la Mariña."],en:["Xilloi beach (O Vicedo)","Blue-flag beach, white sand and views of Coelleira island — one of the best on the Mariña coast."],map:dir("Praia de Xilloi O Vicedo")},
+  {band:"near",min:"12 min",es:["Playa de Xilloi (O Vicedo)","Bandera azul, arena fina y aguas resguardadas. Una de las mejores playas de la Mariña lucense."],en:["Xilloi beach (O Vicedo)","Blue-flag beach, fine sand and sheltered water — one of the best on the Mariña coast."],map:dir("Praia de Xilloi O Vicedo")},
   {band:"mid",min:"18 min",es:["Acantilados de Loiba","El famoso «mejor banco del mundo» asomado a acantilados verdes sobre el mar."],en:["Loiba cliffs","The famous “best bench in the world” perched on green cliffs above the sea."],map:dir("Acantilados de Loiba banco")},
-  {band:"mid",min:"25 min",es:["Punta Fuciño do Porco","Pasarela de madera de 3,7 km que serpentea entre acantilados y calas. Reserva de plaza recomendada en verano."],en:["Punta Fuciño do Porco","A 3.7 km wooden walkway winding along cliffs and coves. Book a slot in summer."],map:dir("Punta Fuciño do Porco San Cibrao"),info:"https://www.puntafucinodoporco.gal/es/reservas"},
-  {band:"mid",min:"28 min",es:["Viveiro casco histórico","Villa medieval amurallada con la Porta do Castelo, plazas con soportales y buenas tabernas."],en:["Viveiro old town","Walled medieval town with the Porta do Castelo gate, arcaded squares and good taverns."],map:dir("Viveiro casco histórico")},
+  {band:"mid",min:"25 min",es:["Punta Fuciño do Porco","Península de acantilados con un sendero y tramos de pasarela hasta el faro. Reserva de plaza recomendada en verano."],en:["Punta Fuciño do Porco","A cliff headland with a trail and boardwalk sections out to the lighthouse. Book a slot in summer."],map:dir("Punta Fuciño do Porco San Cibrao"),info:"https://www.puntafucinodoporco.gal/es/reservas"},
+  {band:"mid",min:"28 min",es:["Viveiro casco histórico","Villa medieval amurallada con la Porta de Carlos V, plazas con soportales y buenas tabernas."],en:["Viveiro old town","Walled medieval town with the Porta de Carlos V gate, arcaded squares and good taverns."],map:dir("Porta de Carlos V Viveiro")},
   {band:"mid",min:"30 min",es:["Playa de Area (Viveiro)","Gran arenal abierto al Cantábrico, perfecto para paseos largos y surf suave."],en:["Area beach (Viveiro)","Wide sandy beach open to the Cantabrian Sea, great for long walks and gentle surf."],map:dir("Praia de Area Viveiro")},
-  {band:"mid",min:"32 min",es:["Ría de Ortigueira y Espasante","Marismas, aves y el pueblo marinero de Espasante con la playa de Sismundi."],en:["Ortigueira estuary & Espasante","Marshland, birdlife and the fishing village of Espasante with Sismundi beach."],map:dir("Espasante praia de Sismundi")},
+  {band:"mid",min:"32 min",es:["Ría de Ortigueira y Espasante","Marismas, aves y los pueblos marineros de Espasante y Ortigueira, cuna del festival celta."],en:["Ortigueira estuary & Espasante","Marshland, birdlife and the fishing villages of Espasante and Ortigueira, home of the Celtic festival."],map:dir("Espasante, Ortigueira")},
   {band:"far",min:"38 min",es:["Sargadelos (Cervo)","Fábrica y museo de la mítica cerámica azul gallega; visitas y tienda de fábrica."],en:["Sargadelos (Cervo)","Factory and museum of Galicia's iconic blue ceramics; tours and factory shop."],map:dir("Sargadelos fábrica Cervo"),info:"https://www.sargadelos.com"},
   {band:"far",min:"45 min",es:["Cabo Ortegal (Cariño)","Acantilados donde se encuentran el Cantábrico y el Atlántico, con Os Aguillóns y faro."],en:["Cabo Ortegal (Cariño)","Cliffs where the Cantabrian Sea meets the Atlantic, with the Aguillóns sea stacks and lighthouse."],map:dir("Cabo Ortegal faro Cariño")},
   {band:"far",min:"50 min",es:["Garita de Herbeira","Uno de los acantilados más altos de Europa continental (600 m), en la Serra da Capelada."],en:["Garita de Herbeira","One of the highest sea cliffs in continental Europe (600 m), in the Serra da Capelada."],map:dir("Garita da Herbeira mirador")},
