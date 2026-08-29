@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miguelsalom99.github.io/a-casa-de-paco/sitemap.xml
