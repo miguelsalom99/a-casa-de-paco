@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Casa de Paco · O Barqueiro, Galicia</title>
+<meta name="description" content="A Casa de Paco — casa completa de 4 dormitorios (113 m²) a un paseo de la playa de Arealonga, en O Barqueiro (Galicia). Disponibilidad, calendario y reserva directa por WhatsApp, Airbnb o Booking.com.">
+<meta property="og:title" content="A Casa de Paco · O Barqueiro, Galicia">
+<meta property="og:description" content="Casa completa de 4 dormitorios frente a la ría de O Barqueiro. Reserva directa por WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sea-deep:#1c4b5e;
+    --sea:#2f7789;
+    --sea-light:#e4f0f0;
+    --sand:#f6efe4;
+    --sand-dark:#e9dcc4;
+    --surface-low:#fbf3e4;
+    --terracotta:#c96f4a;
+    --terracotta-dark:#b25a38;
+    --stone:#6f6a5e;
+    --ink:#233238;
+    --white:#ffffff;
+    --wa:#25D366;
+    --wa-dark:#128C7E;
+    --r-sm:4px;      /* buttons, inputs, badges */
+    --r-lg:8px;      /* cards, images, containers */
+    --r-pill:999px;  /* language toggle, FAB, chips */
+    --shadow:0 12px 40px rgba(28,75,94,0.08);
+    --shadow-lg:0 20px 60px rgba(28,75,94,0.14);
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;}
+  h1,h2,h3,h4,.serif{font-family:'Libre Caslon Text',serif;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .kicker{color:var(--terracotta);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12px;}
+
+  /* BUTTONS — Soft (1): 4px radius, not pills */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:var(--r-sm);font-weight:600;text-decoration:none;font-size:15px;transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease, background .15s ease;border:1.5px solid transparent;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;line-height:1;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn:disabled,.btn[aria-disabled="true"]{opacity:.45;pointer-events:none;transform:none;}
+  .btn-primary{background:var(--sea-deep);color:#fff;box-shadow:0 8px 22px rgba(28,75,94,.22);}
+  .btn-secondary{background:var(--white);border-color:var(--sea-deep);color:var(--sea-deep);}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 22px rgba(37,211,102,.30);}
+  .btn-airbnb{background:#FF385C;color:#fff;}
+  .btn-booking{background:#003580;color:#fff;}
+  .btn-outline{background:transparent;border-color:rgba(255,255,255,.6);color:#fff;}
+
+  /* UTILITY BAR */
+  .utilbar{background:var(--ink);color:#cdd7d7;font-size:12px;letter-spacing:.06em;}
+  .utilbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;text-transform:uppercase;}
+  .utilbar a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#e7eeee;}
+  .utilbar a:hover{color:#fff;}
+  .utilbar .lang{display:flex;background:rgba(255,255,255,.08);border-radius:var(--r-pill);padding:2px;letter-spacing:0;}
+  .utilbar .lang button{border:none;background:transparent;color:#bcc9c9;padding:3px 9px;border-radius:var(--r-pill);font-size:11px;font-weight:700;cursor:pointer;}
+  .utilbar .lang button.active{background:var(--sea);color:#fff;}
+  @media (max-width:720px){ .utilbar .u-tide{display:none;} }
+
+  /* HEADER / NAV */
+  header.site{position:sticky;top:0;z-index:60;background:rgba(246,239,228,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--sand-dark);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 24px;}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .brand .mark{width:40px;height:40px;border-radius:var(--r-lg);background:var(--sea-light);color:var(--sea-deep);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+  .brand .name{font-family:'Libre Caslon Text',serif;font-weight:700;font-size:20px;color:var(--sea-deep);line-height:1.05;letter-spacing:.01em;}
+  .brand .sub{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:.16em;color:var(--terracotta);text-transform:uppercase;display:block;margin-top:2px;}
+  .nav-links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0;}
+  .nav-links a{text-decoration:none;font-weight:500;font-size:14.5px;color:var(--ink);white-space:nowrap;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}
+  .nav-links a:hover,.nav-links a.active{color:var(--sea-deep);border-color:var(--terracotta);}
+  .nav-cta{display:flex;align-items:center;gap:10px;}
+  .burger{display:none;background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--sea-deep);}
+  @media (max-width:1040px){
+    .nav-links{position:fixed;top:64px;left:0;right:0;background:var(--sand);flex-direction:column;align-items:flex-start;padding:18px 24px;gap:14px;border-bottom:1px solid var(--sand-dark);transform:translateY(-140%);transition:transform .25s ease;box-shadow:var(--shadow);}
+    .nav-links.open{transform:translateY(0);}
+    .burger{display:block;}
+    .nav-cta .btn span.lbl{display:none;}
+  }
+
+  /* HERO */
+  .hero{background:var(--sand);padding:64px 0 56px;text-align:center;position:relative;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%, rgba(47,119,137,.10), transparent 60%);pointer-events:none;}
+  .hero .wrap{position:relative;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--sand-dark);color:var(--terracotta);padding:7px 16px;border-radius:var(--r-pill);font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px;box-shadow:var(--shadow);}
+  .hero h1{font-size:clamp(34px,5.4vw,58px);line-height:1.12;color:var(--sea-deep);margin:0 auto 18px;max-width:14ch;}
+  .hero p.lead{font-size:clamp(16px,1.7vw,19px);color:var(--stone);max-width:60ch;margin:0 auto 30px;}
+
+  /* HERO SEARCH CARD */
+  .search-card{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);padding:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;max-width:920px;margin:0 auto;text-align:left;}
+  .search-card .fld{flex:1;min-width:150px;}
+  .search-card label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);margin:0 0 5px 4px;}
+  .search-card input,.search-card select{width:100%;padding:11px 12px;border:1px solid var(--sand-dark);border-radius:var(--r-sm);font-size:14px;font-family:inherit;color:var(--ink);background:var(--white);}
+  .search-card input:focus,.search-card select:focus{outline:none;border-color:var(--sea);box-shadow:0 0 0 3px var(--sea-light);}
+  .search-card .btn{flex:0 0 auto;height:44px;}
+  @media (max-width:640px){ .search-card .btn{width:100%;} }
+  .hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;margin-top:22px;font-size:13px;color:var(--stone);}
+  .hero-badges span{display:inline-flex;align-items:center;gap:7px;}
+
+  /* PHOTO STRIP */
+  .strip{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;padding-top:12px;}
+  .strip a{border-radius:var(--r-lg);overflow:hidden;display:block;aspect-ratio:4/3;}
+  .strip a:first-child{aspect-ratio:auto;}
+  .strip img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease;}
+  .strip a:hover img{transform:scale(1.03);}
+  @media (max-width:760px){ .strip{grid-template-columns:1fr 1fr;} .strip a:first-child{grid-column:span 2;aspect-ratio:16/9;} }
+
+  /* SECTIONS */
+  section.block{padding:80px 0;}
+  .section-head{max-width:680px;margin:0 auto 46px;text-align:center;}
+  .section-head h2{font-size:clamp(26px,3.4vw,40px);margin:10px 0 12px;color:var(--sea-deep);}
+  .section-head p{color:var(--stone);font-size:16px;margin:0;}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;}
+  .about .imgcol{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);}
+  .about h2{color:var(--sea-deep);font-size:clamp(24px,3vw,34px);margin:10px 0 14px;}
+  .stat-row{display:flex;gap:16px;margin-top:24px;flex-wrap:wrap;}
+  .stat{background:var(--white);border-radius:var(--r-lg);padding:16px 18px;box-shadow:var(--shadow);min-width:96px;text-align:center;}
+  .stat b{display:block;font-size:22px;color:var(--sea-deep);font-family:'Libre Caslon Text',serif;}
+  .stat span{font-size:12px;color:var(--stone);}
+  @media (max-width:860px){.about{grid-template-columns:1fr;gap:32px;}}
+
+  /* AMENITIES BAND */
+  .band{background:var(--sea-deep);color:#fff;}
+  .band .section-head h2{color:#fff;}
+  .band .section-head p{color:#cfe3e3;}
+  .band .kicker{color:#ffb08a;}
+  .amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .amen-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-lg);padding:20px 16px;text-align:center;}
+  .amen-card .ic{font-size:24px;margin-bottom:8px;}
+  .amen-card h4{margin:0 0 3px;font-size:14.5px;}
+  .amen-card p{margin:0;font-size:12px;color:#cfe3e3;}
+  @media (max-width:860px){.amen-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* ROOMS */
+  .rooms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .room-card{background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);}
+  .room-card img{height:150px;width:100%;object-fit:cover;}
+  .room-card .body{padding:16px 18px;}
+  .room-card h4{margin:0 0 6px;color:var(--sea-deep);font-size:16px;}
+  .room-card p{margin:0;font-size:13px;color:var(--stone);}
+  @media (max-width:860px){.rooms-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* AVAILABILITY / CALENDAR */
+  .avail{background:var(--surface-low);}
+  .cal-layout{display:grid;grid-template-columns:1.35fr .9fr;gap:40px;align-items:start;}
+  @media (max-width:900px){.cal-layout{grid-template-columns:1fr;}}
+  .cal-shell{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;}
+  .cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+  .cal-nav button{border:1px solid var(--sand-dark);background:var(--white);width:36px;height:36px;border-radius:var(--r-sm);cursor:pointer;font-size:16px;color:var(--sea-deep);display:flex;align-items:center;justify-content:center;}
+  .cal-nav button:disabled{opacity:.3;cursor:default;}
+  .cal-months{display:flex;gap:28px;}
+  @media (max-width:560px){.cal-months{flex-direction:column;gap:20px;}}
+  .cal-month{flex:1;}
+  .cal-month .mlabel{text-align:center;font-family:'Libre Caslon Text',serif;font-size:17px;color:var(--sea-deep);margin-bottom:10px;text-transform:capitalize;}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;}
+  .cal-grid .dow{font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--stone);text-align:center;padding:4px 0;text-transform:uppercase;}
+  .cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:13px;border-radius:var(--r-sm);cursor:pointer;border:1px solid transparent;user-select:none;}
+  .cal-day.empty{cursor:default;}
+  .cal-day.disabled{color:#c7c2b6;cursor:not-allowed;}
+  .cal-day.blocked{color:#c7c2b6;cursor:not-allowed;text-decoration:line-through;background:repeating-linear-gradient(45deg,transparent,transparent 3px,#f0e9db 3px,#f0e9db 5px);}
+  .cal-day.avail:hover{border-color:var(--sea);}
+  .cal-day.inrange{background:var(--sea-light);border-radius:0;}
+  .cal-day.endpoint{background:var(--sea-deep);color:#fff;font-weight:600;}
+  .cal-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:11.5px;color:var(--stone);}
+  .cal-legend span{display:inline-flex;align-items:center;gap:6px;}
+  .cal-legend i{width:12px;height:12px;border-radius:3px;display:inline-block;}
+
+  .cal-side .box{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;}
+  .cal-side h3{margin:0 0 4px;color:var(--sea-deep);font-size:20px;}
+  .cal-side .sub{margin:0 0 18px;font-size:13px;color:var(--stone);}
+  .cal-sel{display:flex;gap:12px;margin-bottom:14px;}
+  .cal-sel div{flex:1;background:var(--surface-low);border:1px solid var(--sand-dark);border-radius:var(--r-sm);padding:10px 12px;}
+  .cal-sel label{display:block;font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--stone);}
+  .cal-sel b{font-size:14px;color:var(--ink);font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;}
+  .cal-guests{display:flex;align-items:center;justify-content:space-between;background:var(--surface-low);border:1px solid var(--sand-dark);border-radius:var(--r-sm);padding:10px 12px;margin-bottom:14px;}
+  .cal-guests label{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--stone);}
+  .cal-guests select{border:none;background:transparent;font-size:14px;font-weight:600;color:var(--ink);font-family:inherit;}
+  .cal-msg{font-size:13px;padding:10px 12px;border-radius:var(--r-sm);margin-bottom:14px;}
+  .cal-msg.info{background:var(--sea-light);color:var(--sea-deep);}
+  .cal-msg.warn{background:#fdece4;color:var(--terracotta-dark);}
+  .cal-msg.ok{background:#eafaf1;color:var(--wa-dark);}
+  .cal-side .btn{width:100%;margin-bottom:8px;}
+  .cal-note{font-size:11px;color:var(--stone);text-align:center;margin:10px 0 0;}
+  .cal-note a{color:var(--sea);}
+
+  /* PLANS */
+  .plans{background:var(--sea-light);}
+  .plan-tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:32px;}
+  .plan-tabs button{border:1.5px solid var(--sea);background:transparent;color:var(--sea-deep);padding:9px 16px;border-radius:var(--r-sm);font-weight:600;font-size:13.5px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all .15s ease;}
+  .plan-tabs button.active{background:var(--sea-deep);color:#fff;border-color:var(--sea-deep);}
+  .plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .plan-card{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;}
+  .plan-card .tag{align-self:flex-start;background:var(--sand);color:var(--sea-deep);font-size:11px;font-weight:600;padding:4px 10px;border-radius:var(--r-pill);margin-bottom:10px;}
+  .plan-card h4{margin:0 0 6px;color:var(--sea-deep);font-size:17px;}
+  .plan-card p{margin:0 0 14px;font-size:13px;color:var(--stone);flex:1;}
+  .plan-links{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;font-weight:600;}
+  .plan-links a{color:var(--sea);text-decoration:none;border-bottom:1px solid transparent;}
+  .plan-links a:hover{border-bottom-color:var(--sea);}
+  @media (max-width:900px){.plan-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:620px){.plan-grid{grid-template-columns:1fr;}}
+
+  /* REVIEWS */
+  .reviews{background:var(--sand-dark);}
+  .score-row{display:flex;justify-content:center;gap:40px;margin-bottom:40px;flex-wrap:wrap;}
+  .score{text-align:center;}
+  .score b{font-size:32px;color:var(--sea-deep);font-family:'Libre Caslon Text',serif;display:block;}
+  .score span{font-size:12.5px;color:var(--stone);}
+  .review-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .review-card{background:var(--white);padding:24px;border-radius:var(--r-lg);box-shadow:var(--shadow);}
+  .review-card .stars{color:var(--terracotta);letter-spacing:2px;margin-bottom:10px;}
+  .review-card p.quote{font-style:italic;color:var(--ink);margin:0 0 12px;font-size:14px;}
+  .review-card .who{font-size:12.5px;color:var(--stone);font-weight:600;}
+  @media (max-width:860px){.review-cards{grid-template-columns:1fr;}}
+
+  /* LOCATION */
+  .location-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:stretch;}
+  .location-grid iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:var(--r-lg);box-shadow:var(--shadow);}
+  .loc-list{list-style:none;margin:0;padding:0;}
+  .loc-list li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--sand-dark);}
+  .loc-list li .ic{font-size:20px;}
+  .loc-list li b{display:block;color:var(--sea-deep);}
+  .loc-list li span{font-size:13px;color:var(--stone);}
+  @media (max-width:860px){.location-grid{grid-template-columns:1fr;}}
+
+  /* BOOK */
+  .book{background:var(--white);}
+  .book-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .book-card{border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:26px 22px;display:flex;flex-direction:column;text-align:center;background:var(--sand);}
+  .book-card.feature{background:linear-gradient(160deg,#eafaf1,#d6f5e3);border-color:var(--wa);position:relative;}
+  .book-card.feature .pick{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--wa-dark);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 12px;border-radius:var(--r-pill);white-space:nowrap;}
+  .book-card h3{margin:0 0 6px;color:var(--sea-deep);font-size:19px;}
+  .book-card .price-note{font-size:12.5px;color:var(--stone);margin:0 0 14px;flex:1;}
+  .book-card ul{list-style:none;margin:0 0 16px;padding:0;text-align:left;font-size:12.5px;color:var(--ink);}
+  .book-card ul li{padding:4px 0 4px 22px;position:relative;}
+  .book-card ul li::before{content:"✓";position:absolute;left:0;color:var(--wa-dark);font-weight:700;}
+  .book-card .btn{width:100%;}
+  @media (max-width:860px){.book-cols{grid-template-columns:1fr;}}
+
+  /* HOST */
+  .host{display:flex;gap:28px;align-items:center;background:var(--sand);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:32px;}
+  .host img{width:92px;height:92px;border-radius:var(--r-pill);object-fit:cover;flex-shrink:0;}
+  .host h3{margin:0 0 6px;color:var(--sea-deep);}
+  .host p{margin:0;color:var(--stone);font-size:14px;}
+  .badge-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;}
+  .badge{background:var(--white);border-radius:var(--r-pill);padding:6px 12px;font-size:12px;font-weight:600;color:var(--sea-deep);}
+  @media (max-width:640px){.host{flex-direction:column;text-align:center;}}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#cdd7d7;padding:52px 0 26px;font-size:13.5px;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:34px;}
+  footer h5{color:#fff;font-size:13px;margin:0 0 12px;letter-spacing:.08em;text-transform:uppercase;font-family:'Plus Jakarta Sans',sans-serif;}
+  footer a{color:#cdd7d7;text-decoration:none;}
+  footer a:hover{color:#fff;}
+  footer ul{list-style:none;margin:0;padding:0;}
+  footer ul li{margin-bottom:8px;}
+  .legal-line{border-top:1px solid #3a4a4a;padding-top:18px;font-size:11.5px;color:#93a3a3;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;}
+  @media (max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+
+  /* FLOATING WHATSAPP */
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:70;background:var(--wa);color:#fff;width:56px;height:56px;border-radius:var(--r-pill);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.28);text-decoration:none;font-size:26px;transition:transform .15s ease;}
+  .wa-float:hover{transform:scale(1.08);}
+
+  html[lang="es"] [data-lang="en"]{display:none !important;}
+  html[lang="en"] [data-lang="es"]{display:none !important;}
+</style>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div class="utilbar">
+  <div class="wrap">
+    <span class="u-tide">O Barqueiro · Rías Altas · Galicia — <span data-lang="es">Marea &amp; costa atlántica</span><span data-lang="en">Atlantic coast &amp; tides</span></span>
+    <div style="display:flex;align-items:center;gap:16px">
+      <a id="utilWa" href="#" target="_blank" rel="noopener">💬 +34 691 999 415</a>
+      <div class="lang">
+        <button id="btnEs" onclick="setLang('es')">ES</button>
+        <button id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER / NAV -->
+<header class="site">
+  <nav class="wrap">
+    <a href="#top" class="brand">
+      <span class="mark">⚓</span>
+      <span>
+        <span class="name">A Casa de Paco</span>
+        <span class="sub">O Barqueiro · Galicia</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-lang="es">La casa</a><a href="#about" data-lang="en">The house</a></li>
+      <li><a href="#amenities" data-lang="es">Comodidades</a><a href="#amenities" data-lang="en">Amenities</a></li>
+      <li><a href="#rooms" data-lang="es">Habitaciones</a><a href="#rooms" data-lang="en">Rooms</a></li>
+      <li><a href="#availability" data-lang="es">Disponibilidad</a><a href="#availability" data-lang="en">Availability</a></li>
+      <li><a href="#plans" data-lang="es">Qué hacer</a><a href="#plans" data-lang="en">Things to do</a></li>
+      <li><a href="#reviews" data-lang="es">Opiniones</a><a href="#reviews" data-lang="en">Reviews</a></li>
+      <li><a href="#location" data-lang="es">Ubicación</a><a href="#location" data-lang="en">Location</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#book"><span>🗓️</span><span class="lbl" data-lang="es">Reservar</span><span class="lbl" data-lang="en">Book</span></a>
+      <button class="burger" id="burgerBtn" aria-label="Menú">☰</button>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">⚓ <span data-lang="es">Casa completa · desde 1928 en O Barqueiro</span><span data-lang="en">Whole house · in O Barqueiro since 1928</span></span>
+    <h1 data-lang="es">Donde la ría gallega se encuentra con la calma</h1>
+    <h1 data-lang="en">Where the Galician estuary meets calm</h1>
+    <p class="lead" data-lang="es">Una casa amplia y luminosa de 113 m² a un paseo de la playa de Arealonga, en uno de los rincones más auténticos de la costa gallega. Cuatro dormitorios, jardín y terraza privada. Ideal para familias y grupos de hasta 7 personas.</p>
+    <p class="lead" data-lang="en">A bright, spacious 113 m² house a short walk from Arealonga beach, in one of the most authentic corners of the Galician coast. Four bedrooms, garden and private terrace. Perfect for families and groups of up to 7.</p>
+
+    <div class="search-card">
+      <div class="fld">
+        <label data-lang="es">Entrada</label><label data-lang="en">Check-in</label>
+        <input type="date" id="hIn">
+      </div>
+      <div class="fld">
+        <label data-lang="es">Salida</label><label data-lang="en">Check-out</label>
+        <input type="date" id="hOut">
+      </div>
+      <div class="fld">
+        <label data-lang="es">Huéspedes</label><label data-lang="en">Guests</label>
+        <select id="hGuests">
+          <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option>
+          <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
+        </select>
+      </div>
+      <a class="btn btn-primary" href="#availability">
+        <span data-lang="es">Ver disponibilidad →</span><span data-lang="en">Check availability →</span>
+      </a>
+    </div>
+
+    <div class="hero-badges">
+      <span>🛏️ <span data-lang="es">4 dormitorios · 4 camas</span><span data-lang="en">4 bedrooms · 4 beds</span></span>
+      <span>👥 <span data-lang="es">Hasta 7 huéspedes</span><span data-lang="en">Up to 7 guests</span></span>
+      <span>🏖️ <span data-lang="es">1,4 km a la playa</span><span data-lang="en">1.4 km to the beach</span></span>
+      <span>🚗 <span data-lang="es">Parking privado gratis</span><span data-lang="en">Free private parking</span></span>
+      <span>⭐ <span data-lang="es">9,5 Booking · 5,0 Airbnb</span><span data-lang="en">9.5 Booking · 5.0 Airbnb</span></span>
+    </div>
+
+    <div class="strip">
+      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg" alt="A Casa de Paco - dormitorio principal"></a>
+      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/e1fbe1f7-474f-442a-8286-35f1287dbd83.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/e1fbe1f7-474f-442a-8286-35f1287dbd83.jpeg" alt="A Casa de Paco - salón"></a>
+      <a href="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/2348b507-b2a8-4d84-9938-6a941be8b13e.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/2348b507-b2a8-4d84-9938-6a941be8b13e.jpeg" alt="A Casa de Paco - dormitorio"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="block" id="about">
+  <div class="wrap about">
+    <div class="imgcol">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/1fbf8396-ec64-4b61-a8f0-3c5906a8d44f.jpeg" alt="Interior de A Casa de Paco">
+    </div>
+    <div>
+      <div class="kicker" data-lang="es">La casa</div><div class="kicker" data-lang="en">The house</div>
+      <h2 data-lang="es">Espacio de sobra, a tu ritmo</h2>
+      <h2 data-lang="en">Plenty of space, at your own pace</h2>
+      <p data-lang="es">A Casa de Paco ocupa la primera planta de una casa gallega, con entrada independiente, jardín y terraza propia. 113 m² totalmente equipados: tres dormitorios dobles, un dormitorio individual, un amplio salón con dos sofás cama, cocina completa y un baño con ducha. Vistas a la montaña, al jardín y al pueblo, en un entorno tranquilo del puerto de O Barqueiro.</p>
+      <p data-lang="en">A Casa de Paco occupies the first floor of a Galician house, with its own entrance, garden and private terrace. 113 m² fully equipped: three double bedrooms, one single bedroom, a spacious living room with two sofa beds, a full kitchen and one bathroom with shower. Mountain, garden and village views, in a quiet corner of O Barqueiro harbour.</p>
+      <div class="stat-row">
+        <div class="stat"><b>113 m²</b><span data-lang="es">Superficie</span><span data-lang="en">Floor area</span></div>
+        <div class="stat"><b>4</b><span data-lang="es">Dormitorios</span><span data-lang="en">Bedrooms</span></div>
+        <div class="stat"><b>1</b><span data-lang="es">Baño</span><span data-lang="en">Bathroom</span></div>
+        <div class="stat"><b>7</b><span data-lang="es">Huéspedes</span><span data-lang="en">Guests</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="block band" id="amenities">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker" data-lang="es">Comodidades</div><div class="kicker" data-lang="en">Amenities</div>
+      <h2 data-lang="es">Todo lo que necesitas</h2>
+      <h2 data-lang="en">Everything you need</h2>
+      <p data-lang="es">37 comodidades listadas en Airbnb y Booking. Estas son las principales.</p>
+      <p data-lang="en">37 amenities listed on Airbnb and Booking. These are the highlights.</p>
+    </div>
+    <div class="amen-grid">
+      <div class="amen-card"><div class="ic">🚗</div><h4 data-lang="es">Parking gratis in situ</h4><h4 data-lang="en">Free parking on site</h4><p data-lang="es">En la propiedad</p><p data-lang="en">On the property</p></div>
+      <div class="amen-card"><div class="ic">🌳</div><h4 data-lang="es">Jardín, patio y terraza</h4><h4 data-lang="en">Garden, patio &amp; terrace</h4><p data-lang="es">Espacio exterior privado</p><p data-lang="en">Private outdoor space</p></div>
+      <div class="amen-card"><div class="ic">🍳</div><h4 data-lang="es">Cocina completa</h4><h4 data-lang="en">Full kitchen</h4><p data-lang="es">Nevera, cafetera, lavadora</p><p data-lang="en">Fridge, coffee maker, washer</p></div>
+      <div class="amen-card"><div class="ic">📺</div><h4 data-lang="es">TV pantalla plana + wifi</h4><h4 data-lang="en">Flat-screen TV + wifi</h4><p data-lang="es">Salón amplio</p><p data-lang="en">Spacious living room</p></div>
+      <div class="amen-card"><div class="ic">🏔️</div><h4 data-lang="es">Vistas montaña, jardín y pueblo</h4><h4 data-lang="en">Mountain, garden &amp; village views</h4><p data-lang="es">Luz natural todo el día</p><p data-lang="en">Natural light all day</p></div>
+      <div class="amen-card"><div class="ic">🚪</div><h4 data-lang="es">Entrada independiente</h4><h4 data-lang="en">Private entrance</h4><p data-lang="es">Primera planta de casa</p><p data-lang="en">First floor of a house</p></div>
+      <div class="amen-card"><div class="ic">🛌</div><h4 data-lang="es">Ropa de cama incluida</h4><h4 data-lang="en">Linens included</h4><p data-lang="es">Secador y amenities</p><p data-lang="en">Hair dryer &amp; toiletries</p></div>
+      <div class="amen-card"><div class="ic">🏖️</div><h4 data-lang="es">Playa cerca</h4><h4 data-lang="en">Beach nearby</h4><p data-lang="es">Arealonga a 1,4 km</p><p data-lang="en">Arealonga 1.4 km away</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="block" id="rooms">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker" data-lang="es">Distribución</div><div class="kicker" data-lang="en">Layout</div>
+      <h2 data-lang="es">Habitaciones y espacios</h2>
+      <h2 data-lang="en">Rooms &amp; spaces</h2>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/2348b507-b2a8-4d84-9938-6a941be8b13e.jpeg" alt="Dormitorio doble">
+        <div class="body"><h4 data-lang="es">3 dormitorios dobles</h4><h4 data-lang="en">3 double bedrooms</h4><p data-lang="es">Camas de matrimonio y armario</p><p data-lang="en">Double beds and wardrobe</p></div>
+      </div>
+      <div class="room-card">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/27a67ca8-3b31-497f-a6a3-6739fe32546e.jpeg" alt="Dormitorio individual">
+        <div class="body"><h4 data-lang="es">1 dormitorio individual</h4><h4 data-lang="en">1 single bedroom</h4><p data-lang="es">Ideal para niños o solo/a</p><p data-lang="en">Great for kids or solo guests</p></div>
+      </div>
+      <div class="room-card">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/1fbf8396-ec64-4b61-a8f0-3c5906a8d44f.jpeg" alt="Salón con sofás cama">
+        <div class="body"><h4 data-lang="es">Salón con 2 sofás cama</h4><h4 data-lang="en">Living room, 2 sofa beds</h4><p data-lang="es">Capacidad extra si hace falta</p><p data-lang="en">Extra capacity if needed</p></div>
+      </div>
+      <div class="room-card">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/20a0508c-2cf2-4e40-821c-a424e7128b26.jpeg" alt="Baño con ducha">
+        <div class="body"><h4 data-lang="es">1 baño con ducha</h4><h4 data-lang="en">1 bathroom with shower</h4><p data-lang="es">Baño privado del alojamiento</p><p data-lang="en">Private to the apartment</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVAILABILITY / CALENDAR -->
+<section class="block avail" id="availability">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker" data-lang="es">Disponibilidad</div><div class="kicker" data-lang="en">Availability</div>
+      <h2 data-lang="es">Consulta el calendario</h2>
+      <h2 data-lang="en">Check the calendar</h2>
+      <p data-lang="es">Estancia mínima de 2 noches. Selecciona entrada y salida y te llevamos a WhatsApp con las fechas listas para confirmar con Carmen.</p>
+      <p data-lang="en">Minimum stay of 2 nights. Pick check-in and check-out and we'll take you to WhatsApp with the dates ready to confirm with Carmen.</p>
+    </div>
+
+    <div class="cal-layout">
+      <div class="cal-shell">
+        <div class="cal-nav">
+          <button id="calPrev" aria-label="Mes anterior">‹</button>
+          <button id="calNext" aria-label="Mes siguiente">›</button>
+        </div>
+        <div class="cal-months" id="calMonths"></div>
+        <div class="cal-legend">
+          <span><i style="background:var(--sea-deep)"></i><span data-lang="es">Seleccionado</span><span data-lang="en">Selected</span></span>
+          <span><i style="background:var(--sea-light)"></i><span data-lang="es">Disponible</span><span data-lang="en">Available</span></span>
+          <span><i style="background:#e9e2d3"></i><span data-lang="es">No disponible</span><span data-lang="en">Unavailable</span></span>
+        </div>
+      </div>
+
+      <div class="cal-side">
+        <div class="box">
+          <h3 data-lang="es">Tu estancia</h3><h3 data-lang="en">Your stay</h3>
+          <p class="sub" data-lang="es">Mínimo 2 noches.</p><p class="sub" data-lang="en">Minimum 2 nights.</p>
+          <div class="cal-sel">
+            <div><label data-lang="es">Entrada</label><label data-lang="en">Check-in</label><b id="selIn">—</b></div>
+            <div><label data-lang="es">Salida</label><label data-lang="en">Check-out</label><b id="selOut">—</b></div>
+          </div>
+          <div class="cal-guests">
+            <label data-lang="es">Huéspedes</label><label data-lang="en">Guests</label>
+            <select id="cGuests">
+              <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option>
+              <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
+            </select>
+          </div>
+          <div class="cal-msg info" id="calMsg" data-lang="es">Selecciona tu fecha de entrada en el calendario.</div>
+          <div class="cal-msg info" id="calMsgEn" data-lang="en">Select your check-in date on the calendar.</div>
+          <a class="btn btn-wa" id="calWa" href="#" target="_blank" rel="noopener" aria-disabled="true">
+            <span data-lang="es">💬 Consultar por WhatsApp</span><span data-lang="en">💬 Ask on WhatsApp</span>
+          </a>
+          <a class="btn btn-secondary" id="calAirbnb" href="https://www.airbnb.es/rooms/865260422376480197" target="_blank" rel="noopener">
+            <span data-lang="es">Reservar en Airbnb ↗</span><span data-lang="en">Book on Airbnb ↗</span>
+          </a>
+          <p class="cal-note">
+            <span data-lang="es">Disponibilidad sincronizada con Airbnb y Booking · actualizado 29/08/2026.<br>Confirmación final siempre con Carmen o la plataforma.</span>
+            <span data-lang="en">Availability synced with Airbnb and Booking · updated 29 Aug 2026.<br>Final confirmation always with Carmen or the platform.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="block plans" id="plans">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker" data-lang="es">Qué hacer</div><div class="kicker" data-lang="en">Things to do</div>
+      <h2 data-lang="es">Planes a menos de 1 hora en coche</h2>
+      <h2 data-lang="en">Plans within a 1-hour drive</h2>
+      <p data-lang="es">Playas salvajes, acantilados de vértigo, rutas de senderismo, pueblos marineros y buena mesa. Filtra por tiempo de trayecto.</p>
+      <p data-lang="en">Wild beaches, dramatic cliffs, hiking trails, fishing villages and great food. Filter by driving time.</p>
+    </div>
+    <div class="plan-tabs">
+      <button data-filter="all" class="active"><span data-lang="es">Todos</span><span data-lang="en">All</span></button>
+      <button data-filter="near"><span data-lang="es">&lt;15 min</span><span data-lang="en">&lt;15 min</span></button>
+      <button data-filter="mid"><span data-lang="es">15–35 min</span><span data-lang="en">15–35 min</span></button>
+      <button data-filter="far"><span data-lang="es">35–60 min</span><span data-lang="en">35–60 min</span></button>
+    </div>
+    <div class="plan-grid" id="planGrid"></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="block reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker" data-lang="es">Opiniones</div><div class="kicker" data-lang="en">Reviews</div>
+      <h2 data-lang="es">Lo que dicen nuestros huéspedes</h2>
+      <h2 data-lang="en">What our guests say</h2>
+    </div>
+    <div class="score-row">
+      <div class="score"><b>9,5/10</b><span data-lang="es">Booking.com · 22 comentarios · «Excepcional»</span><span data-lang="en">Booking.com · 22 reviews · "Exceptional"</span></div>
+      <div class="score"><b>5,0★</b><span data-lang="es">Airbnb · 9 evaluaciones · Favorito de huéspedes</span><span data-lang="en">Airbnb · 9 reviews · Guest favourite</span></div>
+    </div>
+    <div class="review-cards">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote" data-lang="es">"Todos los aspectos del alojamiento son sobresalientes. Carmen, amable y pendiente de nosotros en todo momento."</p>
+        <p class="quote" data-lang="en">"Every aspect of the place is outstanding. Carmen was kind and attentive throughout."</p>
+        <div class="who">— Miren · Airbnb</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote" data-lang="es">"Éramos una familia de 5. El alojamiento es reciente y está en la primera planta de una casa grande, con jardín."</p>
+        <p class="quote" data-lang="en">"We were a family of 5. The place is recent, on the first floor of a large house, with a garden."</p>
+        <div class="who">— Anne · Airbnb</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote" data-lang="es">"La anfitriona es majísima. La casa es preciosa y muy acogedora. Se puede bajar andando al puerto y tiene playas cerca."</p>
+        <p class="quote" data-lang="en">"The host is lovely. The house is beautiful and very cosy. You can walk down to the harbour and there are beaches nearby."</p>
+        <div class="who">— Georgina · Booking.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="block" id="location">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker" data-lang="es">Ubicación</div><div class="kicker" data-lang="en">Location</div>
+      <h2 data-lang="es">O Barqueiro, A Coruña</h2>
+      <h2 data-lang="en">O Barqueiro, A Coruña</h2>
+    </div>
+    <div class="location-grid">
+      <iframe src="https://www.google.com/maps?q=43.73596,-7.70722&hl=es&z=14&output=embed" loading="lazy" allowfullscreen title="Mapa de A Casa de Paco"></iframe>
+      <ul class="loc-list">
+        <li><span class="ic">📍</span><div><b data-lang="es">Dirección</b><b data-lang="en">Address</b><span>Estrada Viveiro 55, 15337 O Barqueiro, A Coruña, Galicia · <a href="https://www.google.com/maps/dir/?api=1&destination=43.73596,-7.70722" target="_blank" rel="noopener" style="color:var(--sea)">Cómo llegar ↗</a></span></div></li>
+        <li><span class="ic">🏖️</span><div><b data-lang="es">Playa de Arealonga</b><b data-lang="en">Arealonga beach</b><span data-lang="es">1,4 km · unos 19 min a pie</span><span data-lang="en">1.4 km · about a 19-minute walk</span></div></li>
+        <li><span class="ic">🚆</span><div><b data-lang="es">Estación de tren O Barqueiro (FEVE)</b><b data-lang="en">O Barqueiro train station (FEVE)</b><span data-lang="es">Línea Ferrol–Ribadeo–Oviedo, a 5 min</span><span data-lang="en">Ferrol–Ribadeo–Oviedo line, 5 min away</span></div></li>
+        <li><span class="ic">✈️</span><div><b data-lang="es">Aeropuertos</b><b data-lang="en">Airports</b><span data-lang="es">A Coruña 100 km · Asturias 135 km · Santiago 160 km</span><span data-lang="en">A Coruña 100 km · Asturias 135 km · Santiago 160 km</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="block book" id="book">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker" data-lang="es">Reservar</div><div class="kicker" data-lang="en">Book</div>
+      <h2 data-lang="es">Tres formas de reservar</h2>
+      <h2 data-lang="en">Three ways to book</h2>
+      <p data-lang="es">Reserva directa con Carmen y te ahorras las comisiones de las plataformas. Si lo prefieres, también estamos en Airbnb y Booking.com con las mismas fechas.</p>
+      <p data-lang="en">Book directly with Carmen and skip the platform fees. If you prefer, we're also on Airbnb and Booking.com with the same availability.</p>
+    </div>
+    <div class="book-cols">
+      <div class="book-card feature">
+        <span class="pick" data-lang="es">Mejor precio</span><span class="pick" data-lang="en">Best price</span>
+        <h3 data-lang="es">Directo por WhatsApp</h3><h3 data-lang="en">Direct on WhatsApp</h3>
+        <p class="price-note" data-lang="es">Trato directo con la anfitriona. Sin comisiones de plataforma.</p>
+        <p class="price-note" data-lang="en">Deal directly with your host. No platform fees.</p>
+        <ul>
+          <li data-lang="es">Respuesta en menos de 1 hora</li><li data-lang="en">Reply within 1 hour</li>
+          <li data-lang="es">Precio y condiciones flexibles</li><li data-lang="en">Flexible price &amp; terms</li>
+          <li data-lang="es">Consejos locales personalizados</li><li data-lang="en">Personalised local tips</li>
+        </ul>
+        <a class="btn btn-wa" id="bookWa" href="#" target="_blank" rel="noopener">
+          <span data-lang="es">💬 Escribir a Carmen</span><span data-lang="en">💬 Message Carmen</span>
+        </a>
+      </div>
+      <div class="book-card">
+        <h3>Airbnb</h3>
+        <p class="price-note" data-lang="es">Pago y cancelación gestionados por Airbnb. 5,0★ · 9 evaluaciones · Favorito de huéspedes.</p>
+        <p class="price-note" data-lang="en">Payment and cancellation handled by Airbnb. 5.0★ · 9 reviews · Guest favourite.</p>
+        <ul>
+          <li data-lang="es">Protección al huésped de Airbnb</li><li data-lang="en">Airbnb guest protection</li>
+          <li data-lang="es">Pago con tarjeta seguro</li><li data-lang="en">Secure card payment</li>
+        </ul>
+        <a class="btn btn-airbnb" href="https://www.airbnb.es/rooms/865260422376480197?unique_share_id=ac40fc63-9cf3-4b36-aa66-c64915c64c86&viralityEntryPoint=1&s=76" target="_blank" rel="noopener">
+          <span data-lang="es">Ver en Airbnb ↗</span><span data-lang="en">View on Airbnb ↗</span>
+        </a>
+      </div>
+      <div class="book-card">
+        <h3>Booking.com</h3>
+        <p class="price-note" data-lang="es">Pago y cancelación gestionados por Booking. 9,5/10 · 22 comentarios · desde ~910 € / semana (tasas incl.).</p>
+        <p class="price-note" data-lang="en">Payment and cancellation handled by Booking. 9.5/10 · 22 reviews · from ~€910 / week (taxes incl.).</p>
+        <ul>
+          <li data-lang="es">Confirmación inmediata</li><li data-lang="en">Instant confirmation</li>
+          <li data-lang="es">A menudo cancelación gratis</li><li data-lang="en">Often free cancellation</li>
+        </ul>
+        <a class="btn btn-booking" href="https://www.booking.com/Share-wODzsN" target="_blank" rel="noopener">
+          <span data-lang="es">Ver en Booking.com ↗</span><span data-lang="en">View on Booking.com ↗</span>
+        </a>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:26px;font-size:13px;color:var(--stone)">
+      <span data-lang="es">Check-in flexible 16:00–20:00 · Check-out hasta las 11:00 · Estancia mínima 2 noches · Nº registro turístico VUT-CO-008512</span>
+      <span data-lang="en">Flexible check-in 4–8 PM · Check-out by 11 AM · Minimum stay 2 nights · Tourism reg. no. VUT-CO-008512</span>
+    </p>
+  </div>
+</section>
+
+<!-- HOST -->
+<section class="block" id="host">
+  <div class="wrap">
+    <div class="host">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/7bace2f9-3ab4-4ea8-bf0c-5fddf747d4a7.jpeg" alt="A Casa de Paco">
+      <div>
+        <h3 data-lang="es">Tu anfitriona: Carmen</h3>
+        <h3 data-lang="en">Your host: Carmen</h3>
+        <p data-lang="es">Carmen lleva 3 años recibiendo huéspedes en O Barqueiro, con una tasa de respuesta del 100 % en menos de una hora. Siempre disponible para recomendarte los mejores rincones de la zona.</p>
+        <p data-lang="en">Carmen has been welcoming guests in O Barqueiro for 3 years, with a 100% response rate within one hour. Always happy to recommend the best spots in the area.</p>
+        <div class="badge-row">
+          <span class="badge" data-lang="es">⭐ 100 % respuesta</span><span class="badge" data-lang="en">⭐ 100% response rate</span>
+          <span class="badge" data-lang="es">⏱️ Responde en 1 hora</span><span class="badge" data-lang="en">⏱️ Replies within an hour</span>
+          <span class="badge" data-lang="es">🏡 3 años como anfitriona</span><span class="badge" data-lang="en">🏡 3 years hosting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5>A Casa de Paco</h5>
+        <p data-lang="es">Estrada Viveiro 55, 15337 O Barqueiro, A Coruña, Galicia, España.</p>
+        <p data-lang="en">Estrada Viveiro 55, 15337 O Barqueiro, A Coruña, Galicia, Spain.</p>
+        <p><a id="footWa" href="#" target="_blank" rel="noopener" style="color:var(--wa);font-weight:600">💬 +34 691 999 415 (Carmen)</a></p>
+      </div>
+      <div>
+        <h5 data-lang="es">Enlaces</h5><h5 data-lang="en">Links</h5>
+        <ul>
+          <li><a href="#about" data-lang="es">La casa</a><a href="#about" data-lang="en">The house</a></li>
+          <li><a href="#availability" data-lang="es">Disponibilidad</a><a href="#availability" data-lang="en">Availability</a></li>
+          <li><a href="#plans" data-lang="es">Qué hacer</a><a href="#plans" data-lang="en">Things to do</a></li>
+          <li><a href="#location" data-lang="es">Ubicación</a><a href="#location" data-lang="en">Location</a></li>
+          <li><a href="#book" data-lang="es">Reservar</a><a href="#book" data-lang="en">Book</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-lang="es">Reserva en</h5><h5 data-lang="en">Book on</h5>
+        <ul>
+          <li><a id="footWa2" href="#" target="_blank" rel="noopener">WhatsApp directo ↗</a></li>
+          <li><a href="https://www.airbnb.es/rooms/865260422376480197?unique_share_id=ac40fc63-9cf3-4b36-aa66-c64915c64c86&viralityEntryPoint=1&s=76" target="_blank" rel="noopener">Airbnb ↗</a></li>
+          <li><a href="https://www.booking.com/Share-wODzsN" target="_blank" rel="noopener">Booking.com ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal-line">
+      <span>© <span id="year"></span> A Casa de Paco · O Barqueiro.</span>
+      <span data-lang="es">Nº registro turístico (Galicia): VUT-CO-008512</span>
+      <span data-lang="en">Tourism registration No. (Galicia): VUT-CO-008512</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+/* =========================================================================
+   A Casa de Paco — interactivity
+   ========================================================================= */
+
+var WA_NUMBER = "34691999415";
+var lang = "es";
+
+/* ---- HOW CARMEN KEEPS THE CALENDAR UPDATED --------------------------------
+   A static web page cannot read Airbnb / Booking calendars live (they are
+   private and CORS-protected). Keep this list in sync with your Airbnb or
+   Booking calendar. Each entry blocks arrival on every night from `start`
+   up to (but not including) `end` — same convention as a hotel booking.
+   Format: { start:"YYYY-MM-DD", end:"YYYY-MM-DD" }
+   Checked on 2026-08-29: Airbnb and Booking show NO blocked dates for the
+   coming months, so the list is empty.
+--------------------------------------------------------------------------- */
+var BOOKED = [
+  // { start:"2026-10-10", end:"2026-10-14" },
+];
+
+var MIN_NIGHTS = 2;
+var BOOKING_WINDOW_MONTHS = 14;   // how far ahead guests may request
+
+/* ---- date helpers -------------------------------------------------------- */
+function ymd(d){ var m=d.getMonth()+1, day=d.getDate(); return d.getFullYear()+"-"+(m<10?"0":"")+m+"-"+(day<10?"0":"")+day; }
+function parseYmd(s){ var p=s.split("-"); return new Date(+p[0], +p[1]-1, +p[2]); }
+function addDays(d,n){ var x=new Date(d); x.setDate(x.getDate()+n); return x; }
+function startOfMonth(d){ return new Date(d.getFullYear(), d.getMonth(), 1); }
+function sameDay(a,b){ return a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate(); }
+function nightsBetween(a,b){ return Math.round((b-a)/86400000); }
+var TODAY = (function(){ var t=new Date(); return new Date(t.getFullYear(),t.getMonth(),t.getDate()); })();
+var MAXDATE = addDays(TODAY, BOOKING_WINDOW_MONTHS*31);
+
+function isBlocked(d){
+  for(var i=0;i<BOOKED.length;i++){
+    if(d >= parseYmd(BOOKED[i].start) && d < parseYmd(BOOKED[i].end)) return true;
+  }
+  return false;
+}
+function rangeHasBlocked(a,b){ // any blocked night in [a, b)
+  for(var d=new Date(a); d<b; d=addDays(d,1)){ if(isBlocked(d)) return true; }
+  return false;
+}
+function fmt(d){
+  var loc = lang==="en" ? "en-GB" : "es-ES";
+  return d.toLocaleDateString(loc,{day:"numeric",month:"short",year:"numeric"});
+}
+
+/* ---- shared selection state ------------------------------------------- */
+var sel = { in:null, out:null, guests:2 };
+var viewMonth = startOfMonth(TODAY);
+
+/* ---- WhatsApp links -------------------------------------------------- */
+function waLink(text){ return "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(text); }
+
+function bookingMsg(){
+  var en = lang==="en";
+  var m = en ? "Hi Carmen! I'd like to check availability at A Casa de Paco (O Barqueiro)."
+             : "¡Hola Carmen! Me gustaría consultar la disponibilidad de A Casa de Paco (O Barqueiro).";
+  if(sel.in){ m += "\n"+(en?"Check-in: ":"Entrada: ")+ymd(sel.in); }
+  if(sel.out){ m += "\n"+(en?"Check-out: ":"Salida: ")+ymd(sel.out); }
+  if(sel.in && sel.out){ m += "\n"+(en?"Nights: ":"Noches: ")+nightsBetween(sel.in,sel.out); }
+  m += "\n"+(en?"Guests: ":"Huéspedes: ")+sel.guests;
+  m += "\n"+(en?"Could you confirm availability and price? Thanks!":"¿Me confirmas disponibilidad y precio? ¡Gracias!");
+  return m;
+}
+function refreshWaLinks(){
+  var url = waLink(bookingMsg());
+  ["utilWa","bookWa","waFloat","footWa","footWa2"].forEach(function(id){
+    var el=document.getElementById(id); if(el) el.href=url;
+  });
+}
+
+/* ---- Airbnb deep link with dates ----------------------------------- */
+function airbnbLink(){
+  var base = "https://www.airbnb.es/rooms/865260422376480197";
+  if(sel.in && sel.out){
+    return base + "?check_in="+ymd(sel.in)+"&check_out="+ymd(sel.out)+"&adults="+sel.guests;
+  }
+  return base;
+}
+
+/* ---- calendar rendering -------------------------------------------- */
+var MONTHS_ES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+var MONTHS_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+var DOW_ES = ["L","M","X","J","V","S","D"];
+var DOW_EN = ["M","T","W","T","F","S","S"];
+
+function renderMonth(base){
+  var y=base.getFullYear(), m=base.getMonth();
+  var first=new Date(y,m,1);
+  var startDow=(first.getDay()+6)%7;   // Monday = 0
+  var daysInMonth=new Date(y,m+1,0).getDate();
+  var names=(lang==="en"?MONTHS_EN:MONTHS_ES);
+  var dows=(lang==="en"?DOW_EN:DOW_ES);
+
+  var html='<div class="cal-month"><div class="mlabel">'+names[m]+' '+y+'</div><div class="cal-grid">';
+  for(var i=0;i<7;i++) html+='<div class="dow">'+dows[i]+'</div>';
+  for(var e=0;e<startDow;e++) html+='<div class="cal-day empty"></div>';
+
+  for(var day=1;day<=daysInMonth;day++){
+    var d=new Date(y,m,day);
+    var cls="cal-day", attr="";
+    var past = d < TODAY;
+    var beyond = d > MAXDATE;
+    var blk = isBlocked(d);
+    if(past || beyond){ cls+=" disabled"; }
+    else if(blk){ cls+=" blocked"; }
+    else {
+      cls+=" avail";
+      attr=' data-d="'+ymd(d)+'"';
+      if(sel.in && sameDay(d,sel.in)) cls+=" endpoint";
+      else if(sel.out && sameDay(d,sel.out)) cls+=" endpoint";
+      else if(sel.in && sel.out && d>sel.in && d<sel.out) cls+=" inrange";
+      else if(sel.in && !sel.out && d>sel.in && d<=addDays(sel.in,14) && !rangeHasBlocked(sel.in,d)) { /* hover hint handled by CSS only */ }
+    }
+    html+='<div class="'+cls+'"'+attr+'>'+day+'</div>';
+  }
+  html+='</div></div>';
+  return html;
+}
+
+function renderCalendar(){
+  document.getElementById("calMonths").innerHTML = renderMonth(viewMonth) + renderMonth(new Date(viewMonth.getFullYear(), viewMonth.getMonth()+1, 1));
+  document.getElementById("calPrev").disabled = (startOfMonth(viewMonth) <= startOfMonth(TODAY));
+  var lastAllowed = startOfMonth(MAXDATE);
+  document.getElementById("calNext").disabled = (new Date(viewMonth.getFullYear(), viewMonth.getMonth()+1, 1) >= lastAllowed);
+
+  document.querySelectorAll('.cal-day.avail[data-d]').forEach(function(el){
+    el.addEventListener("click", function(){ pickDate(parseYmd(el.getAttribute("data-d"))); });
+  });
+  syncSelectionUI();
+}
+
+function pickDate(d){
+  sel._short = null;
+  if(!sel.in || (sel.in && sel.out)){
+    sel.in = d; sel.out = null;
+  } else if(d <= sel.in){
+    sel.in = d; sel.out = null;
+  } else {
+    if(rangeHasBlocked(sel.in, d)){ sel.in = d; sel.out = null; }
+    else if(nightsBetween(sel.in,d) < MIN_NIGHTS){ /* keep in, ignore – message will explain */ sel.out=null; sel._short=d; }
+    else { sel.out = d; sel._short=null; }
+  }
+  renderCalendar();
+}
+
+function syncSelectionUI(){
+  var msg = document.getElementById("calMsg");
+  var msgEn = document.getElementById("calMsgEn");
+  var waBtn = document.getElementById("calWa");
+  var abBtn = document.getElementById("calAirbnb");
+
+  document.getElementById("selIn").textContent  = sel.in  ? fmt(sel.in)  : "—";
+  document.getElementById("selOut").textContent = sel.out ? fmt(sel.out) : "—";
+
+  var stateEs, stateEn, kind;
+  if(!sel.in){
+    stateEs = "Selecciona tu fecha de entrada en el calendario.";
+    stateEn = "Select your check-in date on the calendar.";
+    kind = "info";
+  } else if(!sel.out){
+    if(sel._short){
+      stateEs = "La estancia mínima es de 2 noches. Elige una salida más tarde.";
+      stateEn = "Minimum stay is 2 nights. Pick a later check-out.";
+      kind = "warn";
+    } else {
+      stateEs = "Ahora selecciona tu fecha de salida (mínimo 2 noches).";
+      stateEn = "Now select your check-out date (minimum 2 nights).";
+      kind = "info";
+    }
+  } else {
+    var n = nightsBetween(sel.in, sel.out);
+    stateEs = "¡Disponible! "+n+" noche"+(n>1?"s":"")+" · "+fmt(sel.in)+" → "+fmt(sel.out)+".";
+    stateEn = "Available! "+n+" night"+(n>1?"s":"")+" · "+fmt(sel.in)+" → "+fmt(sel.out)+".";
+    kind = "ok";
+  }
+  msg.textContent = stateEs; msg.className = "cal-msg "+kind;
+  msgEn.textContent = stateEn; msgEn.className = "cal-msg "+kind;
+
+  var ready = !!(sel.in && sel.out);
+  waBtn.setAttribute("aria-disabled", ready ? "false" : "true");
+  waBtn.href = waLink(bookingMsg());
+  abBtn.href = airbnbLink();
+
+  // mirror into hero + guests
+  var hi=document.getElementById("hIn"), ho=document.getElementById("hOut");
+  if(hi) hi.value = sel.in ? ymd(sel.in) : "";
+  if(ho) ho.value = sel.out ? ymd(sel.out) : "";
+  refreshWaLinks();
+}
+
+/* ---- hero inputs feed the calendar ---------------------------------- */
+function heroToState(){
+  sel._short = null;
+  var hi=document.getElementById("hIn").value, ho=document.getElementById("hOut").value;
+  sel.in  = hi ? parseYmd(hi) : null;
+  sel.out = ho ? parseYmd(ho) : null;
+  if(sel.in && sel.out && (rangeHasBlocked(sel.in,sel.out) || nightsBetween(sel.in,sel.out) < MIN_NIGHTS)) sel.out = null;
+  if(sel.in) viewMonth = startOfMonth(sel.in);
+  renderCalendar();
+}
+
+/* ---- guests ---------------------------------------------------------- */
+function setGuests(v){
+  sel.guests = +v;
+  document.getElementById("hGuests").value = v;
+  document.getElementById("cGuests").value = v;
+  syncSelectionUI();
+}
+
+/* ---- language ------------------------------------------------------- */
+function setLang(l){
+  lang = l;
+  document.documentElement.setAttribute("lang", l);
+  document.getElementById("btnEs").classList.toggle("active", l==="es");
+  document.getElementById("btnEn").classList.toggle("active", l==="en");
+  renderPlans();
+  renderCalendar();
+  refreshWaLinks();
+}
+
+/* ---- plans (within 1h drive of O Barqueiro) ------------------------- */
+var HOME="43.73596,-7.70722";
+function dir(dest){ return "https://www.google.com/maps/dir/?api=1&origin="+HOME+"&destination="+encodeURIComponent(dest); }
+var PLANS=[
+  {band:"near",min:"5 min",es:["Puerto de O Barqueiro","Pasear por el puerto pesquero, terrazas junto al agua y salida de kayak por la ría."],en:["O Barqueiro harbour","Stroll the fishing harbour, waterfront terraces and kayak launch into the estuary."],map:dir("Porto do Barqueiro"),info:"https://aventurasengalicia.com/actividad/kayak-de-mar-en-el-puerto-de-o-barqueiro-ria-de-o-barqueiro-estaca-de-bares/"},
+  {band:"near",min:"6 min",es:["Playa de Arealonga","Arena fina y aguas tranquilas dentro de la ría, ideal con niños. A 19 min a pie de la casa."],en:["Arealonga beach","Fine sand and calm estuary water, great with kids. A 19-minute walk from the house."],map:dir("Praia de Arealonga O Barqueiro")},
+  {band:"near",min:"12 min",es:["Estaca de Bares y su faro","El punto más al norte de la Península Ibérica: faro, semáforo, miradores y puesta de sol sobre el Cantábrico."],en:["Estaca de Bares & lighthouse","The northernmost point of the Iberian Peninsula: lighthouse, viewpoints and sunset over the Cantabrian Sea."],map:dir("Punta Estaca de Bares Faro")},
+  {band:"near",min:"12 min",es:["Porto de Bares y Coído","Puerto natural con dique de origen romano-fenicio, playa resguardada y marisco en los chiringuitos."],en:["Porto de Bares & Coído","Natural harbour with a Roman-Phoenician breakwater, a sheltered beach and seafood shacks."],map:dir("Porto de Bares")},
+  {band:"near",min:"12 min",es:["Playa de Xilloi (O Vicedo)","Bandera azul, arena blanca y vistas a la isla Coelleira. Una de las mejores playas de la Mariña."],en:["Xilloi beach (O Vicedo)","Blue-flag beach, white sand and views of Coelleira island — one of the best on the Mariña coast."],map:dir("Praia de Xilloi O Vicedo")},
+  {band:"mid",min:"18 min",es:["Acantilados de Loiba","El famoso «mejor banco del mundo» asomado a acantilados verdes sobre el mar."],en:["Loiba cliffs","The famous “best bench in the world” perched on green cliffs above the sea."],map:dir("Acantilados de Loiba banco")},
+  {band:"mid",min:"25 min",es:["Punta Fuciño do Porco","Pasarela de madera de 3,7 km que serpentea entre acantilados y calas. Reserva de plaza recomendada en verano."],en:["Punta Fuciño do Porco","A 3.7 km wooden walkway winding along cliffs and coves. Book a slot in summer."],map:dir("Punta Fuciño do Porco San Cibrao"),info:"https://www.puntafucinodoporco.gal/es/reservas"},
+  {band:"mid",min:"28 min",es:["Viveiro casco histórico","Villa medieval amurallada con la Porta do Castelo, plazas con soportales y buenas tabernas."],en:["Viveiro old town","Walled medieval town with the Porta do Castelo gate, arcaded squares and good taverns."],map:dir("Viveiro casco histórico")},
+  {band:"mid",min:"30 min",es:["Playa de Area (Viveiro)","Gran arenal abierto al Cantábrico, perfecto para paseos largos y surf suave."],en:["Area beach (Viveiro)","Wide sandy beach open to the Cantabrian Sea, great for long walks and gentle surf."],map:dir("Praia de Area Viveiro")},
+  {band:"mid",min:"32 min",es:["Ría de Ortigueira y Espasante","Marismas, aves y el pueblo marinero de Espasante con la playa de Sismundi."],en:["Ortigueira estuary & Espasante","Marshland, birdlife and the fishing village of Espasante with Sismundi beach."],map:dir("Espasante praia de Sismundi")},
+  {band:"far",min:"38 min",es:["Sargadelos (Cervo)","Fábrica y museo de la mítica cerámica azul gallega; visitas y tienda de fábrica."],en:["Sargadelos (Cervo)","Factory and museum of Galicia's iconic blue ceramics; tours and factory shop."],map:dir("Sargadelos fábrica Cervo"),info:"https://www.sargadelos.com"},
+  {band:"far",min:"45 min",es:["Cabo Ortegal (Cariño)","Acantilados donde se encuentran el Cantábrico y el Atlántico, con Os Aguillóns y faro."],en:["Cabo Ortegal (Cariño)","Cliffs where the Cantabrian Sea meets the Atlantic, with the Aguillóns sea stacks and lighthouse."],map:dir("Cabo Ortegal faro Cariño")},
+  {band:"far",min:"50 min",es:["Garita de Herbeira","Uno de los acantilados más altos de Europa continental (600 m), en la Serra da Capelada."],en:["Garita de Herbeira","One of the highest sea cliffs in continental Europe (600 m), in the Serra da Capelada."],map:dir("Garita da Herbeira mirador")},
+  {band:"far",min:"52 min",es:["San Andrés de Teixido","Santuario de peregrinación entre acantilados: «vai de morto quen non foi de vivo»."],en:["San Andrés de Teixido","Cliff-top pilgrimage sanctuary — legend says you go there dead if you didn't go alive."],map:dir("San Andrés de Teixido")},
+  {band:"far",min:"58 min",es:["Praia das Catedrais (Ribadeo)","Arcos y bóvedas de roca de hasta 30 m en bajamar. Reserva gratuita obligatoria en Semana Santa y verano."],en:["Praia das Catedrais (Ribadeo)","Rock arches up to 30 m high at low tide. Free booking required at Easter and in summer."],map:dir("Praia das Catedrais Ribadeo"),info:"https://ascatedrais.xunta.gal/monatr/inicio?lang=es"}
+];
+var EAT=[
+  {es:["Restaurante A Sobreposta","Pescado y marisco con vistas a la ría, en O Barqueiro."],en:["Restaurante A Sobreposta","Fish and seafood with estuary views, in O Barqueiro."],map:dir("Restaurante A Sobreposta O Barqueiro"),info:"https://www.asobreposta.es"},
+  {es:["Casa Fanego","Parrilla de brasa de gran calidad en la playa de San Román (O Vicedo)."],en:["Casa Fanego","Top-quality charcoal grill on San Román beach (O Vicedo)."],map:dir("Casa Fanego San Román O Vicedo"),info:"https://casafanego.com"}
+];
+function renderPlans(){
+  var l=lang, grid=document.getElementById("planGrid");
+  var active=document.querySelector(".plan-tabs button.active");
+  var filter=active?active.getAttribute("data-filter"):"all";
+  var bandLabel={near:{es:"5–12 min",en:"5–12 min"},mid:{es:"15–35 min",en:"15–35 min"},far:{es:"35–60 min",en:"35–60 min"}};
+  grid.innerHTML="";
+  PLANS.filter(function(p){return filter==="all"||p.band===filter;}).forEach(function(p){
+    var t=p[l], links='<a href="'+p.map+'" target="_blank" rel="noopener">'+(l==="en"?"Directions ↗":"Cómo llegar ↗")+'</a>';
+    if(p.info) links+='<a href="'+p.info+'" target="_blank" rel="noopener">'+(l==="en"?"More info ↗":"Más info ↗")+'</a>';
+    var c=document.createElement("div"); c.className="plan-card";
+    c.innerHTML='<span class="tag">🚗 '+p.min+' · '+bandLabel[p.band][l]+'</span><h4>'+t[0]+'</h4><p>'+t[1]+'</p><div class="plan-links">'+links+'</div>';
+    grid.appendChild(c);
+  });
+  if(filter==="all"){
+    EAT.forEach(function(p){
+      var t=p[l];
+      var links='<a href="'+p.map+'" target="_blank" rel="noopener">'+(l==="en"?"Directions ↗":"Cómo llegar ↗")+'</a><a href="'+p.info+'" target="_blank" rel="noopener">'+(l==="en"?"Website ↗":"Web ↗")+'</a>';
+      var c=document.createElement("div"); c.className="plan-card";
+      c.innerHTML='<span class="tag">🍽️ '+(l==="en"?"Where to eat":"Dónde comer")+'</span><h4>'+t[0]+'</h4><p>'+t[1]+'</p><div class="plan-links">'+links+'</div>';
+      grid.appendChild(c);
+    });
+  }
+}
+
+/* ---- wiring -------------------------------------------------------- */
+document.getElementById("calPrev").addEventListener("click", function(){
+  viewMonth = new Date(viewMonth.getFullYear(), viewMonth.getMonth()-1, 1); renderCalendar();
+});
+document.getElementById("calNext").addEventListener("click", function(){
+  viewMonth = new Date(viewMonth.getFullYear(), viewMonth.getMonth()+1, 1); renderCalendar();
+});
+document.getElementById("hIn").addEventListener("change", heroToState);
+document.getElementById("hOut").addEventListener("change", heroToState);
+document.getElementById("hGuests").addEventListener("change", function(){ setGuests(this.value); });
+document.getElementById("cGuests").addEventListener("change", function(){ setGuests(this.value); });
+
+document.querySelectorAll(".plan-tabs button").forEach(function(b){
+  b.addEventListener("click", function(){
+    document.querySelectorAll(".plan-tabs button").forEach(function(x){ x.classList.remove("active"); });
+    b.classList.add("active"); renderPlans();
+  });
+});
+
+document.getElementById("burgerBtn").addEventListener("click", function(){
+  document.getElementById("navLinks").classList.toggle("open");
+});
+document.querySelectorAll(".nav-links a").forEach(function(a){
+  a.addEventListener("click", function(){ document.getElementById("navLinks").classList.remove("open"); });
+});
+
+/* date input min attributes */
+(function(){
+  var iso = ymd(TODAY), max = ymd(MAXDATE);
+  ["hIn","hOut"].forEach(function(id){
+    var el=document.getElementById(id); el.min=iso; el.max=max;
+  });
+})();
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* init */
+setLang((navigator.language||"es").toLowerCase().indexOf("en")===0 ? "en" : "es");
+</script>
+
+</body>
+</html>
