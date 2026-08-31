@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://miguelsalom99.github.io/a-casa-de-paco/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://miguelsalom99.github.io/a-casa-de-paco/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://miguelsalom99.github.io/a-casa-de-paco/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://miguelsalom99.github.io/a-casa-de-paco/"/>
-    <image:image xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-      <image:loc>https://a0.muscache.com/im/pictures/miso/Hosting-865260422376480197/original/f39bed04-f63e-41bf-8d68-93e9dec350b0.jpeg</image:loc>
-      <image:title>A Casa de Paco - O Barqueiro, Galicia</image:title>
-    </image:image>
   </url>
 </urlset>
